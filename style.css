@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    width: 400px;
+    margin: 0px auto; 
+}
+.dangki{
+    width: 400px;
+    border: 1px solid #DDDDDD;
+    margin: 60px auto;
+}
+.dangki h3{
+    background: #009688;
+    padding: 10px;
+    text-align: center;
+    color: #FFF;
+}
+.dangki from table tr td{
+    padding: 50px;
+}
+
+.dangki from table tr td input{
+
+    padding: 50px;
+    width: 95%;
+    border: 1px solid #009688;
+
+
+}
+.list{
+    background: yellow;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.danhsach{
+    width: 800px;
+    margin: auto ;
+    margin-top: 50px;
+}
+.danhsach table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.danhsach h3{
+    background: #009688;
+    padding: 10px;
+    text-align: center;
+    color: #FFF;
+}
