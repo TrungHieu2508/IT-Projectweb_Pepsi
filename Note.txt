@@ -1,6 +1,1 @@
-Kết quả code 
-- Xammpp mở Apache& MySQL
--Folder dự án phải nằm trong htdocs của xampp 
 
-http://localhost:8081/Git/IT-Projectweb_Pepsi/index.php?controller=user&action=add
-http://localhost:8081/Git/IT-Projectweb_Pepsi/index.php?controller=user&action=list
