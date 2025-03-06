@@ -13,7 +13,7 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-   
+
     line-height: 1.5;
     font-family: sans-serif;
 }
@@ -24,7 +24,7 @@ html, body {
     flex-direction: column;
 }
 
-.container {
+.app__container {
     flex: 1; /* Nội dung sẽ mở rộng để đẩy footer xuống */
 }
 body{

@@ -23,7 +23,7 @@
     margin: 10px 10px;
     cursor: pointer; 
 }
-.container{
+.app__container{
    padding-top: 70px; 
 }
 
@@ -119,4 +119,53 @@
 }
 .app__menu__close--btn:active{
     opacity: .5;
+}
+.welcome__img img{
+    height: 650px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.app__container__welcome{
+    display: flex;
+    align-items: center;
+}
+
+.welcome__heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.welcome__heading__content{
+    margin-left: 100px;
+    margin-top: 40px;
+    line-height: 100px;
+}
+.welcome__heading__content h1{
+    font-size: 120px;
+    font-weight: 900;
+    color: rgb(0 37 255);
+}
+
+.welcome__heading__content h2{
+    font-size: 65px;
+    font-weight: 900;
+    margin-left: 10px;
+    color:var(--white-color);
+}
+
+.welcome__heading__content h3{
+    font-size: 25px;
+    font-weight: 900;
+    color:var(--white-color);
+    margin-left: 150px;
+    margin-bottom: -30px;
+}
+
+.welcome__heading--down{
+    margin-left: 100px;
 }
