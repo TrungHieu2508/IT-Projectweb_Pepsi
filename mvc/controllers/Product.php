@@ -15,13 +15,7 @@ class Product extends Controller {
         ]);
     }
     
-    public function Detail($id){
-        $products = $this->ProductModel->getProductById($id);
 
-        $this->view("master1", [
-            "page" => "chitiet",
-            "product" => $products
-        ]);
-    }
+    
 }
 ?>

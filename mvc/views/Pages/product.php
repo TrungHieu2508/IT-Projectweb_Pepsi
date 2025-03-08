@@ -18,10 +18,7 @@
                 $imageData = base64_encode($products['img']);
                 ?>
                 <!-- Link to the product detail page with the product ID -->
-                <a href="index.php?url=Product/Detail/<?php echo $products['id']; ?>">
-                <img src="data:image/jpeg;base64,<?php echo $imageData; ?>" alt="<?php echo htmlspecialchars($products['name']); ?>">                    
-                <!-- <h2><?php echo htmlspecialchars($products['name']); ?></h2> -->
-                <!-- <p><?php echo htmlspecialchars($products['description']); ?></p> -->
+                <img src="data:image/jpeg;base64,<?php echo $imageData; ?>" alt="Product Image">                    
                 </div>
             <?php endforeach; ?>
         <?php else: ?>
