@@ -1,8 +1,8 @@
 <?php
 class Home extends Controller {
   public function Show(){
-    $this->view("Home", [
-      "Page"=>"home"
+    $this->view("master1", [
+      "page"=>"home"
     ]);
   }
 }
