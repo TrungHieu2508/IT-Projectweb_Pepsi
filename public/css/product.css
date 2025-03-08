@@ -1,0 +1,24 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.product-item {
+    flex: 1 1 calc(33.33% - 10px); 
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ccc;
+}
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
