@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-        require_once "./mvc/views/Pages/" . $data['page'] . ".php";  // Correct file path
+        require_once "./mvc/views/Pages/" . $data['page'] . ".php";  
   
     ?>
 </body>
