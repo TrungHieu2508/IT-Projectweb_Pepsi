@@ -13,7 +13,7 @@ html, body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-
+    scroll-behavior: smooth;
     line-height: 1.5;
     font-family: sans-serif;
 }
