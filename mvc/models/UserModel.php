@@ -7,11 +7,17 @@ class UserModel extends DB
         return $this->result;
     }
 
-    public function InsertData($name,$email,$password)
+    public function InsertData($name, $email, $password)
     {
-        $sql = "INSERT INTO user(id,name,email,password) VALUES(null,'$name','$email','$password')";
-        return $this->execute($sql);
+        // Sử dụng prepared statement để tránh SQL injection
+        $sql = "INSERT INTO user (name, email, password) VALUES (?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("sss", $name, $email, $password);
+        $result = $stmt->execute();
+        $stmt->close();
+        return $result;
     }
+
     public function GetUserByEmail($email)
     {
         $sql = "SELECT * FROM user WHERE email = ?";
@@ -24,7 +30,8 @@ class UserModel extends DB
         
         return $user;
     }
-
 }
+
+
 
 ?>
