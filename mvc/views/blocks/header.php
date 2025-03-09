@@ -22,7 +22,7 @@
                 <img src="./public/img/logoweb.png" alt="logo website">
             </div>
             <div class="app__menu--content">
-                <a href="#">Log In / Register <br></a>
+                <a href="login">Log In / Register <br></a>
                 <a href="#">Buy Pepsi <br></a>
                 <a href="#">Recipes <br></a>
                 <a href="product">View Products <br></a>
