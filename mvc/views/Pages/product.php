@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
     <link rel="stylesheet" href="./public/css/product.css">
-
 </head>
 <body>
     <div id="content">
-        <h1>Product List</h1>
         <div class="product-list">
         <?php if (isset($data['product']) && !empty($data['product'])): ?>
             <?php foreach ($data['product'] as $products): ?>

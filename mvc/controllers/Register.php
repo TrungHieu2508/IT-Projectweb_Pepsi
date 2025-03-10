@@ -8,7 +8,7 @@ class Register extends Controller
     }
     public function Show()
     {
-        $this->view("master2", [
+        $this->view("master1", [
             "page" => "register"
         ]);
     }
@@ -23,7 +23,7 @@ class Register extends Controller
             $kq = $this->UserModel->InsertData($name, $email, $password);
           
 
-            $this->view("master2", [
+            $this->view("master1", [
                 "page" => "register",
                 "result" => $kq
             ]);

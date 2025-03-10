@@ -22,18 +22,27 @@
                 <img src="./public/img/logoweb.png" alt="logo website">
             </div>
             <div class="app__menu--content">
-                <a href="login">Log In / Register <br></a>
+                <?php if(isset($_SESSION['user'])): ?>
+                    <a href="#">Welcome, <?php echo $_SESSION['user']['name']; ?> <br></a>
+                    <a href="/Git/IT-Projectweb_Pepsi/MyAccount">My Account <br></a>
+                    <a href="/Git/IT-Projectweb_Pepsi/Logout">Logout <br></a>
+                <?php else: ?>
+                    <a href="/Git/IT-Projectweb_Pepsi/Login">Log In / Register <br></a>
+                <?php endif; ?>
                 <a href="#">Buy Pepsi <br></a>
                 <a href="#">Recipes <br></a>
-                <a href="product">View Products <br></a>
+                <a href="/Git/IT-Projectweb_Pepsi/Product">View Products <br></a>
                 <a href="#">Local Eats Deserve Pepsi <br></a>
                 <a href="#">Contact Us <br></a>
             </div>
             <script>
                 function toggleMenu() {
-                document.getElementById("menu").classList.toggle("active");
-            }
+                    document.getElementById("menu").classList.toggle("active");
+                }
             </script>   
         </div>
 
         </div>
+    </div>
+</body>
+</html>
