@@ -23,7 +23,10 @@ class Login extends Controller
                 $_SESSION['user'] = $user;
                 header("Location: /Git/IT-Projectweb_Pepsi/Home");
             } else {
-                echo "Invalid email or password.";
+                $this->view("master1", [
+                    "page" => "login",
+                    "error" => "Invalid email or password."
+                ]);
             }
         }
     }
