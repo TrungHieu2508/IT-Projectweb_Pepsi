@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
-    <link rel="stylesheet" href="./public/css/product.css">
+    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/product.css">
+
 </head>
 <body>
     <div id="content">
@@ -16,7 +17,10 @@
                 $imageData = base64_encode($products['img']);
                 ?>
                 <!-- Link to the product detail page with the product ID -->
-                <img src="data:image/jpeg;base64,<?php echo $imageData; ?>" alt="Product Image">                    
+                <a href="/Git/IT-Projectweb_Pepsi/Product/Detail/<?php echo $products['id']; ?>">
+                <img src="data:image/jpeg;base64,<?php echo $imageData; ?>" alt="Product Image">
+                </a>
+
                 </div>
             <?php endforeach; ?>
         <?php else: ?>

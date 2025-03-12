@@ -35,7 +35,7 @@
                     <?php endif; ?>
                     <a href="#">Buy Pepsi <br></a>
                     <a href="#">Recipes <br></a>
-                    <a href="/Git/IT-Projectweb_Pepsi/Product">View Products <br></a>
+                    <a href="/Git/IT-Projectweb_Pepsi/Product/Detail">View Products <br></a>
                     <a href="#">Local Eats Deserve Pepsi <br></a>
                     <a href="#">Contact Us <br></a>
                 </div>
