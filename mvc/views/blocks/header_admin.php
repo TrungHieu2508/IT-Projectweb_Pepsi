@@ -1,10 +1,9 @@
-<!-- filepath: c:\xampp\htdocs\Git\IT-Projectweb_Pepsi\mvc\views\blocks\header.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepsi.com</title>
+    <title>Admin - Pepsi.com</title>
     <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/main.css">
     <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/base.css">
 </head>
@@ -30,13 +29,15 @@
                     <?php if(isset($_SESSION['user'])): ?>
                         <a>Welcome, <?php echo $_SESSION['user']['name']; ?> <br></a>
                         <a href="/Git/IT-Projectweb_Pepsi/MyAccount/Show">My Account <br></a>
+                        <a href="/Git/IT-Projectweb_Pepsi/Admin/Show">Admin Dashboard <br></a>
+                        <a href="/Git/IT-Projectweb_Pepsi/Logout">Logout <br></a>
                     <?php else: ?>
                         <a href="/Git/IT-Projectweb_Pepsi/Login">Log In / Register <br></a>
                     <?php endif; ?>
-                    <a href="#">Buy Pepsi <br></a>
-                    <a href="#">Recipes <br></a>
-                    <a href="/Git/IT-Projectweb_Pepsi/Product">View Products <br></a>
-                    <a href="#">Local Eats Deserve Pepsi <br></a>
+                    <!-- <a href="#">Buy Pepsi <br></a> -->
+                    <!-- <a href="#">Recipes <br></a> -->
+                    <a href="/Git/IT-Projectweb_Pepsi/Product/Show">View Products <br></a>
+                    <!-- <a href="#">Local Eats Deserve Pepsi <br></a> -->
                     <a href="#">Contact Us <br></a>
                 </div>
                 <script>

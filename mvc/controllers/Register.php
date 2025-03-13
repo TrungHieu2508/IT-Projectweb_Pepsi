@@ -18,6 +18,7 @@ class Register extends Controller
             $name = $_POST["name"];
             $email = $_POST["email"];
             $password = $_POST["password"];
+            $role = 0; // Mặc định vai trò là khách hàng (role = 0)
 
             // Kiểm tra email trùng lặp
             $existingUser = $this->UserModel->GetUserByEmail($email);
@@ -29,8 +30,9 @@ class Register extends Controller
                 return;
             }
 
+            // Mã hóa mật khẩu
             // $password = password_hash($password, PASSWORD_DEFAULT);
-            $kq = $this->UserModel->InsertData($name, $email, $password);
+            $kq = $this->UserModel->InsertData($name, $email, $password, $role);
 
             if ($kq) {
                 $this->view("master1", [

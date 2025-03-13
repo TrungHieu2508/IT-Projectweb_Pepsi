@@ -1,6 +1,4 @@
-<?php 
-    require_once "./mvc/views/blocks/header.php"; 
-?>
+
 <div class="app__container">
 
 <div class="app__container__welcome">
@@ -63,6 +61,3 @@
 </div>
 
 
-<?php 
-    require_once "./mvc/views/blocks/footer.php"; 
-?>

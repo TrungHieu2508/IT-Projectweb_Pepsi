@@ -21,7 +21,12 @@ class Login extends Controller
 
             if ($user && $user['password'] === $password) {
                 $_SESSION['user'] = $user;
-                header("Location: /Git/IT-Projectweb_Pepsi/Home");
+                if ($user['role'] == 1) {
+                    header("Location: /Git/IT-Projectweb_Pepsi/Admin/Show");
+                } else {
+                    header("Location: /Git/IT-Projectweb_Pepsi/Home");
+                }
+                exit();
             } else {
                 $this->view("master1", [
                     "page" => "login",

@@ -11,12 +11,25 @@ class UserModel extends DB
         $this->result = $stmt->get_result();
         return $this->result;
     }
+    public function getAllUsers() {
+        $sql = "SELECT * FROM user";
+        $result = $this->execute($sql);
+        $user = [];
 
-    public function InsertData($name, $email, $password)
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $user[] = $row;
+            }
+        }
+
+        return $user;
+    }
+
+    public function InsertData($name, $email, $password, $role)
     {
-        $sql = "INSERT INTO user (name, email, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO user (name, email, password, role) VALUES (?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sss", $name, $email, $password);
+        $stmt->bind_param("ssss", $name, $email, $password, $role);
         $result = $stmt->execute();
         $stmt->close();
         return $result;
@@ -29,5 +42,6 @@ class UserModel extends DB
         $user = $result->fetch_assoc();
         return $user;
     }
+
 }
 ?>
