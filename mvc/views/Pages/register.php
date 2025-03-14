@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/register.css">
+    <link rel="stylesheet" href="/Git/public/css/register.css">
     <script>
         function validateForm() {
             var name = document.forms["registerForm"]["name"].value;
@@ -21,7 +21,7 @@
 <body>
     <h2>Register</h2>
     <div class="form-container">
-        <form name="registerForm" action="/Git/IT-Projectweb_Pepsi/Register/KHRegister" method="POST" onsubmit="return validateForm()">
+        <form name="registerForm" action="/Git/Register/KHRegister" method="POST" onsubmit="return validateForm()">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="name" class="form-control" placeholder="Enter username" required>
@@ -38,14 +38,14 @@
             </div>
             <button type="submit" name="btnRegister" class="btn btn-primary">Register</button>
         </form>
-        <a href="/Git/IT-Projectweb_Pepsi/Login" class="link">Already have an account? Login here</a>
+        <a href="/Git/Login" class="link">Already have an account? Login here</a>
         <div id="result-message">
             <h3>
             <?php
             if(isset($data['result'])){
                 if($data['result'] == 1){
                     echo "Đăng kí thành công";
-                    echo "<script>setTimeout(function(){ window.location.href = '/Git/IT-Projectweb_Pepsi/Login'; }, 2000);</script>";
+                    echo "<script>setTimeout(function(){ window.location.href = '/Git/Login'; }, 2000);</script>";
                 }else if($data['result'] == -1){
                     echo "Email đã tồn tại. Vui lòng sử dụng email khác.";
                 }else{

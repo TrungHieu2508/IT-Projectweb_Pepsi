@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/login.css">
+    <link rel="stylesheet" href="/Git/public/css/login.css">
 </head>
 <body>
     <h2>Login</h2>
@@ -21,7 +21,7 @@
             </div>
             <button type="submit" name="btnLogin" class="btn btn-primary">Login</button>
         </form>
-        <a href="/Git/IT-Projectweb_Pepsi/Register" class="link">Register</a>
+        <a href="/Git/Register" class="link">Register</a>
         <?php if (isset($data['error'])): ?>
             <div class="error-message">
                 <?php echo $data['error']; ?>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Users</title>
-    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/ManageUsers.css">
+    <link rel="stylesheet" href="/Git/public/css/ManageUsers.css">
 </head>
 <body>
     <div class="manage-users-container">
@@ -31,8 +31,8 @@
                                 <td><?php echo $user['name']; ?></td>
                                 <td><?php echo $user['email']; ?></td>
                                 <td>
-                                    <a href="/Git/IT-Projectweb_Pepsi/Admin/EditUser/<?php echo $user['id']; ?>">Edit</a>
-                                    <a href="/Git/IT-Projectweb_Pepsi/Admin/DeleteUser/<?php echo $user['id']; ?>">Delete</a>
+                                    <a href="/Git/Admin/EditUser/<?php echo $user['id']; ?>">Edit</a>
+                                    <a href="/Git/Admin/DeleteUser/<?php echo $user['id']; ?>">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

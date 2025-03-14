@@ -4,7 +4,7 @@ class MyAccount extends Controller {
 
     // Kiểm tra xem người dùng đã đăng nhập chưa
         if (!isset($_SESSION['user'])) {
-            header("Location: /Git/IT-Projectweb_Pepsi/Login");
+            header("Location: /Git/Login");
             exit();
         }
         

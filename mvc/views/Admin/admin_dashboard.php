@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/Git/public/css/admin_dashboard.css">
 </head>
 <body>
     <div class="admin-dashboard-container">
@@ -15,8 +15,8 @@
         <div class="admin-options">
             <h3>Management Options</h3>
             <ul>
-                <li><a href="/Git/IT-Projectweb_Pepsi/Admin/ManageProducts">Quản lý sản phẩm</a></li>
-                <li><a href="/Git/IT-Projectweb_Pepsi/Admin/ManageUsers">Quản lý khách hàng</a></li>
+                <li><a href="/Git/Admin/ManageProducts">Quản lý sản phẩm</a></li>
+                <li><a href="/Git/Admin/ManageUsers">Quản lý khách hàng</a></li>
             </ul>
         </div>
     </div>

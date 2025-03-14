@@ -1,5 +1,5 @@
 <?php 
-    require_once "./mvc/views/blocks/header_admin.php"; 
+    require_once "./mvc/views/blocks/header.php"; 
     ?>
 
 <?php 

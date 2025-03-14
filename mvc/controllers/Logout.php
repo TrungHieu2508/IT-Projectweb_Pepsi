@@ -9,7 +9,7 @@ class Logout extends Controller
         session_destroy();
 
         // Chuyển hướng đến trang đăng nhập
-        header("Location: /Git/IT-Projectweb_Pepsi/Home");
+        header("Location: /Git/Home");
         exit();
     }
 }

@@ -22,9 +22,9 @@ class Login extends Controller
             if ($user && $user['password'] === $password) {
                 $_SESSION['user'] = $user;
                 if ($user['role'] == 1) {
-                    header("Location: /Git/IT-Projectweb_Pepsi/Admin/Show");
+                    header("Location:/Git/Admin/Show");
                 } else {
-                    header("Location: /Git/IT-Projectweb_Pepsi/Home");
+                    header("Location:/Git/Home");
                 }
                 exit();
             } else {

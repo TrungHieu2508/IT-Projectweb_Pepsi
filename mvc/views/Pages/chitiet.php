@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Git/IT-Projectweb_Pepsi/public/css/chitiet.css">
+    <link rel="stylesheet" href="/Git/public/css/chitiet.css">
 
     <title>Product Detail</title>
 </head>
@@ -36,7 +36,7 @@
                     <tr>
                         <th>Total Fat</th>
                         <td><?php echo $product['total_fat']; ?></td>
-                        <td><?php echo $product['value_sodium']; ?>%</td> 
+                        <td><?php echo $product['value_fat']; ?>%</td> 
 
                     </tr>
                     <tr>
@@ -61,13 +61,12 @@
                         <td><?php echo $product['protein']; ?></td>
                     </tr>
                     <tr>
-                        <th>Components</th>
                         <td><?php echo $product['components']; ?></td>
                     </tr>
 
                 </table>
             </div>
-            <a href="/Git/IT-Projectweb_Pepsi/Product/Show" class="btn btn-primary">Back to Products</a>
+            <a href="/Git/Product/Show" class="btn btn-primary">Back to Products</a>
         <?php else: ?>
             <p>Product not found.</p>
         <?php endif; ?>

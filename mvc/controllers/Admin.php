@@ -16,7 +16,7 @@ class Admin extends Controller {
             ]);
         } else {
             // Nếu không phải admin, chuyển hướng đến trang khách hàng
-            header("Location: /Git/IT-Projectweb_Pepsi/Home");
+            header("Location: /Git/Home");
             exit();
         }
     }

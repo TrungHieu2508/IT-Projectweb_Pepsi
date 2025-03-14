@@ -18,7 +18,7 @@
      <div class="style__content" style="display: flex; flex-direction: column;">
          <div class="content__img"><img src="./public/img/content pepsi.png" alt="content denim jacket"></div>
          <div class="content__text" style="font-size: 23px; line-height: 20px; font-weight: 900; margin-left: 80px;margin-top: 15px;"><p>Enter now for a chance to win this limited-</p><br><p>edition item. *</p></div>
-         <a href="/Git/IT-Projectweb_Pepsi/Login"><button class="content__sign--button">SIGN IN TO ENTER</button></a>
+         <a href="/Git/Login"><button class="content__sign--button">SIGN IN TO ENTER</button></a>
          <div class="content__msg"><p>U.S. res, 18+ (19+ in AL/NE). Ends 3/31/25. Limit one entry per person/email address </p><br><p>per day. Subject to Official Rules.</p></div>
      </div>
 </div>
@@ -27,7 +27,7 @@
      <div class="viewProduct__video">
          <video src="./public/img/Pepsi Product Carousel Video.mp4" controls autoplay loop muted></video>
      </div>
-     <a href="/Git/IT-Projectweb_Pepsi/Product"><button class="viewProduct__button">VIEW PRODUCTS</button></a>
+     <a href="/Git/Product"><button class="viewProduct__button">VIEW PRODUCTS</button></a>
 </div>
 
 <div class="app__container__checkItOut">
