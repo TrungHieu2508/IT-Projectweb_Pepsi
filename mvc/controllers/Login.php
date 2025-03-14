@@ -19,8 +19,11 @@ class Login extends Controller
             $password = htmlspecialchars($_POST["password"]);
             $user = $this->UserModel->GetUserByEmail($email);
 
-            if ($user && $user['password'] === $password) {
+              // Kiểm tra người dùng và xác minh mật khẩu
+              if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user'] = $user;
+
+                // Kiểm tra vai trò và chuyển hướng
                 if ($user['role'] == 1) {
                     header("Location:/Git/Admin/Show");
                 } else {

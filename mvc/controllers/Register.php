@@ -15,8 +15,8 @@ class Register extends Controller
     public function KHRegister()
     {
         if (isset($_POST['btnRegister'])) {
-            $name = $_POST["name"];
-            $email = $_POST["email"];
+            $name = htmlspecialchars(trim($_POST["name"]));
+            $email = htmlspecialchars(trim($_POST["email"]));
             $password = $_POST["password"];
             $role = 0; // Mặc định vai trò là khách hàng (role = 0)
 
@@ -31,7 +31,7 @@ class Register extends Controller
             }
 
             // Mã hóa mật khẩu
-            // $password = password_hash($password, PASSWORD_DEFAULT);
+            $password = password_hash($password, PASSWORD_DEFAULT);
             $kq = $this->UserModel->InsertData($name, $email, $password, $role);
 
             if ($kq) {
