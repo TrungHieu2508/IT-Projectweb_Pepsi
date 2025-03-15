@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepsi.com</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
     <div class="app">
         <div class="app__header">
             <nav class="header__navbar">    
-                <div class="header__navbar--logo"> <img src="./assets/img/logoweb.png" alt="Logo website"></div> 
-                <div class="header__navbar--menu" onclick="toggleMenu()"><img src="./assets/img/Logomenu.png" alt="icon menu"></div>                                             
+                <div class="header__navbar--logo"> <img src="../assets/img/logoweb.png" alt="Logo website"></div> 
+                <div class="header__navbar--menu" onclick="toggleMenu()"><img src="../assets/img/Logomenu.png" alt="icon menu"></div>                                             
             </nav>
 
             <!-- menu ẩn-->
         <div class="app__menu--overlay" id="menu">
             <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
             <div class="app__menu--logo">
-                <img src="./assets/img/logoweb.png" alt="logo website">
+                <img src="../assets/img/logoweb.png" alt="logo website">
             </div>
             <div class="app__menu--content">
                 <a href="#">Log In / Register <br></a>
-                <a href="#">Buy Pepsi <br></a>
+                <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
                 <a href="#">Recipes <br></a>
                 <a href="#">View Products <br></a>
                 <a href="#">Local Eats Deserve Pepsi <br></a>
@@ -42,21 +42,21 @@
         <div class="app__container">
 
            <div class="app__container__welcome">
-                <div class="welcome__img"><img src="./assets/img/pepsi-0sugar.png" alt="pepsi nosugar"></div>
+                <div class="welcome__img"><img src="../assets/img/pepsi-0sugar.png" alt="pepsi nosugar"></div>
                 <div class="welcome__heading">
                     <div class="welcome__heading__content">
                         <h1>WELLCOME</h1>
                         <h2>LET'S GET STARTED</h2>
                         <h3>CHECK OUT THE LATEST DROP</h3>
                     </div>
-                    <div class="welcome__heading--down"><a href="#down"><img src="./assets/img/downward-arrow.png" alt="mui ten huong xuong"></a></div>
+                    <div class="welcome__heading--down"><a href="#down"><img src="../assets/img/downward-arrow.png" alt="mui ten huong xuong"></a></div>
                 </div>
            </div>
            
            <div class="app__container__style" id="down">
-                <div class="style__img__jacket"> <img src="./assets/img/denim cherry front.jpg" alt="denim jacket with pepsi"></div>
+                <div class="style__img__jacket"> <img src="../assets/img/denim cherry front.jpg" alt="denim jacket with pepsi"></div>
                 <div class="style__content" style="display: flex; flex-direction: column;">
-                    <div class="content__img"><img src="./assets/img/content pepsi.png" alt="content denim jacket"></div>
+                    <div class="content__img"><img src="../assets/img/content pepsi.png" alt="content denim jacket"></div>
                     <div class="content__text" style="font-size: 23px; line-height: 20px; font-weight: 900; margin-left: 80px;margin-top: 15px;"><p>Enter now for a chance to win this limited-</p><br><p>edition item. *</p></div>
                     <a href="#"><button class="content__sign--button">SIGN IN TO ENTER</button></a>
                     <div class="content__msg"><p>U.S. res, 18+ (19+ in AL/NE). Ends 3/31/25. Limit one entry per person/email address </p><br><p>per day. Subject to Official Rules.</p></div>
@@ -65,7 +65,7 @@
            
            <div class="app__container__viewProduct">
                 <div class="viewProduct__video">
-                    <video src="./assets/img/Pepsi Product Carousel Video.mp4" controls autoplay loop muted></video>
+                    <video src="../assets/img/Pepsi Product Carousel Video.mp4" controls autoplay loop muted></video>
                 </div>
                 <a href="#"><button class="viewProduct__button">VIEW PRODUCTS</button></a>
            </div>
@@ -85,13 +85,13 @@
 
            <div class="app__container__viewRecipes">
                 <div class="viewRecipes__video" style="position: relative; bottom:195px;">
-                    <video src="./assets/img/Marketing pepsi video.mp4" controls autoplay loop muted></video>
+                    <video src="../assets/img/Marketing pepsi video.mp4" controls autoplay loop muted></video>
                 </div>
                 <a href="#"><button class="viewRecipes__button">VIEW RECIPES</button></a>
            </div>
 
            <div class="app__container__pulse">
-                <div class="pulse__logo"><img src="./assets/img/logoweb.png" alt="logo"></div>
+                <div class="pulse__logo"><img src="../assets/img/logoweb.png" alt="logo"></div>
                 <div class="pulse__content">
                     <h1>STAY ON THE</h1><br><h1 style="font-size: 130px; color:#0025ff; margin-top: 40px;">PULSE</h1>
                 </div>
@@ -102,7 +102,7 @@
         
         <!-- Footer-->
         <footer class="app__footer">
-            <div class="app__footer__logo">  <img src="./assets/img/logoweb.png" alt="logo"></div>
+            <div class="app__footer__logo">  <img src="../assets/img/logoweb.png" alt="logo"></div>
             
             <div class="app__footer__content">
                 <ul class="content__list">
@@ -124,12 +124,13 @@
 
             <div class="app__footer__social" style="margin: 65px 20px;">
                 <ul class="social__icon">
-                    <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="./assets/img/facebook.png" alt="facebook icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
-                    <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="./assets/img/youtube.png" alt="youtube icon" style="height: 50px;margin-left:2rem; margin-top: 3.3rem; "></i></a></li>
-                    <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="./assets/img/instagram.png" alt="instagram icon" style="height: 40px;margin-left:2rem;margin-top:2.5rem ; ;"></a></li>
-                    <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="./assets/img/twitter-sign.png" alt="twitter icon" style="height: 40px;margin-left:2rem;;margin-top:2.5rem ;  "></a></li>
-                    <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="./assets/img/tik-tok.png" alt="tiktok icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
-                    <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="./assets/img/threads.png" alt="threads icon" style="height: 40px; margin-left:2rem;; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="../assets/img/face-book.png" alt="facebook icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="../assets/img/ins.png" alt="instagram icon" style="height: 40px;margin-left:2rem;margin-top:2.5rem ; ;"></a></li>
+                    <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="../assets/img/twitter-sign.png" alt="twitter icon" style="height: 40px;margin-left:2rem;;margin-top:2.5rem ;  "></a></li>
+                    <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="../assets/img/tik-tok.png" alt="tiktok icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="../assets/img/threads.png" alt="threads icon" style="height: 40px; margin-left:2rem;; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="../assets/img/youtube.png" alt="youtube icon" style="height: 50px;margin-left:2rem; margin-top: 3.3rem; "></i></a></li>
+
                 </ul>
             </div>       
         </footer>
