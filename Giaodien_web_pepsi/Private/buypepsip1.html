@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/buypage.css">
 </head>
 <body>
+    <script src="../assets/js/buypepsi.js"></script>
     <div class="app">
         <div class="app__header">
             <nav class="header__navbar">
@@ -15,7 +16,7 @@
                     <li><a href="#">Recipes</a></li>
                     <li><a href="#">View Products</a></li>
                     <li><a href="#">Local Eats Deserve Pepsi</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="../Public/Order.html">Contact us</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,14 +29,30 @@
                 <img src="../assets/img/pepsilocation.png" alt="pepsi loaction">
             </div>
             <div class="container__pepsiText"><p>Pepsi Explorer</p></div>
-            <a href="#"><button class="container__pepsiBtn">Sign up for news and offers</button></a>
+            <a href="#"><button class="container__pepsiBtn">New offers and gifts</button></a>
             <div class="container__textHeader"><p>Product Locator - Pepsi: Explore 24 Pepsi products, compare prices, and enjoy exclusive promotions. From classics to new flavors, find your perfect Pepsi.</p><p> Use search and filters to discover favorites and special offers.</p></div>
             <div class="container__product">
                 <div class="product__header">
                     <div class="product__header__text"><p>Select one or more products to begin.</p><br><p style="text-align: center;">24 Products Found <span style="color:#0025ff;text-decoration: underline; cursor:pointer">Pepsi</span></p></div>
-                    <div class="product__header__findProduct">
-                        <div class="product__header__shopping"><button><img src="../assets/img/add-to-cart.png" alt="shopping cart"></button></div>
-                       <div class="product__header__findBtn"><button >Find Product</button></div>  
+                     <!-- layout cart -->
+                     <div class="product__header__findProduct">
+                        <div class="product__header__shopping">
+                            <img src="../assets/img/shopping-cart.png" alt="shopping cart">
+                            <span class="product__header__shopping--notice">0</span>
+                    
+                            <!-- no card: shopping__cart--list--no-cart -->
+                            <div class="shopping__cart--list shopping__cart--list--no-cart">
+                                <h4 class="shopping__cart--heading">Selected Products</h4>
+                                <div class="shopping__cart--list--no--cart--img">
+                                    <img src="../assets/img/cartoon-word-png-sticker-transparent-background_53876-993545.jpg" alt="shopping cart">
+                                </div>
+                                <p class="shopping__cart--list--msg">There are no products in your cart.</p>
+                                <ul class="shopping__cart--list--item">
+                                    <!-- Các sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="../Public/Order.html"><div class="product__header__findBtn"><button>Order</button></div></a>
                     </div>
                 </div>
                 <div class="product__search">
@@ -47,7 +64,7 @@
                         <div class="showProduct__item">
                             <div class="item__checkbox"><input type="checkbox" id="Pepsi Zero Sugar Wild Cherry"></div>
                             <div class="item__img"><img src="../assets/img/sp1.png" alt="Pepsi Zero Sugar Wild Cherry"></div>
-                            <div class="item__name"><p>Pepsi Zero Sugar </p> <p>Wild Cherry</p></div>
+                            <div class="item__name"><p>Pepsi Zero Sugar </p><p>Wild Cherry</p></div>
                         </div>
     
                         <div class="showProduct__item">
