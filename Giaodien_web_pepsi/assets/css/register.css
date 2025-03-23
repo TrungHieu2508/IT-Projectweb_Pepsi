@@ -1,0 +1,229 @@
+.app__header{
+    background-color: var(--black-color);/* tam thoithoi*/
+    height: 70px;
+    position: fixed;
+    width: 100%; 
+    z-index: 2000;
+}
+.header__navbar{
+    display:flex; 
+    justify-content: space-between;
+}
+
+.header__navbar--menu{
+    font-size: 30px;
+    margin: 20px 25px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.header__navbar--menu:active{
+    opacity: 0.5;
+}
+.header__navbar--logo img{
+    height:50px; 
+    margin: 10px 10px;
+    cursor: pointer; 
+}
+.app__container{
+   padding-top: 70px; 
+   padding-bottom: 120px;
+}
+
+.app__footer{
+    display:flex;
+    width: 100%;
+    background-color: #0025ff;
+    color: white;
+    height: 300px; 
+    padding: 20px;
+}
+.app__footer__logo img{
+    height: 150px; 
+    margin-top: 60px; 
+    cursor: pointer;
+}
+.app__footer__content{
+    display: flex; 
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-size: 2rem;
+    /* margin-right: 280px; */
+    margin-left: 4rem;
+    line-height: 2.5rem;
+    font-weight:bolder;
+}
+.content__list{
+  margin: 0 20px;
+}
+.social__icon{
+    display: flex; 
+    justify-content: center;   
+    margin-right: 1rem; 
+    font-size: 4.3rem;
+    /* margin: 0 100px;  */
+}
+
+.app__menu--overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 46%;
+    height: 100%;
+    background-color: #0025ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    z-index: 1000;
+    border-top-left-radius: 30px;
+    text-align: center;
+}
+
+.app__menu--overlay.active{
+      transform: translateX(0);
+}
+.app__menu--logo{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.app__menu--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 85px;
+    text-align: center; /* Căn giữa text */
+}
+.app__menu--content a:hover{
+    color: rgb(230, 62, 62)
+}
+/* close menu */
+.app__menu__close--btn{
+    position: absolute; 
+    top: 2rem; 
+    right: 2rem; 
+    color:var(--white-color); 
+    cursor:pointer; 
+    font-size: 30px; 
+}
+.app__menu__close--btn:active{
+    opacity: .5;
+}
+.container__text h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container__text p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container__logosignin img{
+    width: 110px;
+    height: 110px;
+    margin-left: 700px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* max-width: 600px; */
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: none; /* Hide labels as they are not in the image */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-group input::placeholder {
+    color: #888;
+    text-transform: uppercase;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #ccc;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.return-home {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.return-home a {
+    color: #fff;
+    text-decoration: underline;
+}
