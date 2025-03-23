@@ -1,4 +1,3 @@
-<!-- filepath: c:\xampp\htdocs\Git\mvc\views\blocks\header.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,33 +23,27 @@
 
             <!-- menu ẩn-->
             <div class="app__menu--overlay" id="menu">
-                <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
-                <div class="app__menu--logo">
-                    <img src="/Git/public/img/logoweb.png" alt="logo website">
-                </div>
-                <div class="app__menu--content">
-                <?php if(isset($_SESSION['user'])): ?>
-                     <a>Welcome, <?php echo $_SESSION['user']['name']; ?> <br></a>
-                     <a href="/Git/MyAccount/Show">My Account <br></a>
-                      <?php if($_SESSION['user']['role'] === 1): ?>
-                      <a href="/Git/Admin/Dashboard">Admin Dashboard <br></a>
-                <?php endif; ?>
-                <?php else: ?>
-                  <a href="/Git/Login">Log In / Register <br></a>
-                 <?php endif; ?>
-                    <!-- <a href="#">Buy Pepsi <br></a> -->
-                    <!-- <a href="#">Recipes <br></a> -->
-                    <a href="/Git/Product">View Products <br></a>
-                    <!-- <a href="#">Local Eats Deserve Pepsi <br></a> -->
-                    <!-- <a href="#">Contact Us <br></a> -->
-                </div>
-                <script>
-                    function toggleMenu() {
-                        document.getElementById("menu").classList.toggle("active");
-                    }
-                </script>   
+            <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
+            <div class="app__menu--logo">
+                <img src="/Git/public/img/logoweb.png" alt="logo website">
             </div>
+            <div class="app__menu--content">
+                <a href="/Git/Login">Log In / Register <br></a>
+                <!-- <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
+                <a href="../Private/recipes.html">Recipes <br></a> -->
+                <a href="#">View Products <br></a>
+                <a href="#">Local Eats Deserve Pepsi <br></a>
+                <a href="#">Contact Us <br></a>
+            </div>
+            <script>
+                function toggleMenu() {
+                document.getElementById("menu").classList.toggle("active");
+            }
+            </script>   
         </div>
+
+        </div>
+        
     </div>
 </body>
 </html>

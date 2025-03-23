@@ -34,9 +34,33 @@ class Admin extends Controller {
             "admin" => "ManageUsers",
             "users" => $user
         ]);
-    }public function EditUser($id) {
-        // Xử lý logic sửa người dùng ở đây
     }
+    public function EditUser($id) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Lấy dữ liệu từ form
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+    
+            // Gọi model để cập nhật thông tin người dùng
+            $result = $this->UserModel->updateUser($id, $name, $email);
+    
+            if ($result) {
+                // Nếu cập nhật thành công, chuyển hướng về trang quản lý người dùng
+                header("Location: /Git/Admin/ManageUsers");
+            } else {
+                // Nếu thất bại, hiển thị thông báo lỗi
+                echo "Cập nhật người dùng thất bại.";
+            }
+        } else {
+            // Lấy thông tin người dùng hiện tại để hiển thị trong form
+            $user = $this->UserModel->getUserById($id);
+            $this->view("master2", [
+                "admin" => "EditUser",
+                "users" => $user
+            ]);
+        }
+    }
+    
 
     public function DeleteUser($id) {
         // Xử lý logic xóa người dùng ở đây

@@ -31,11 +31,17 @@ class Login extends Controller
                 }
                 exit();
             } else {
-                $this->view("master1", [
-                    "page" => "login",
-                    "error" => "Invalid email or password."
-                ]);
+                  // Lưu thông báo lỗi vào session
+            $_SESSION['error'] = "Invalid email or password.";
+            header("Location: /Git/Login"); // Chuyển hướng về trang login
+            exit();
+              
             }
+            
+        }
+        else {
+            header("Location: /Git/Login");
+            exit();
         }
     }
 }

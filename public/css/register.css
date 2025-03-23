@@ -1,74 +1,144 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
+.app__container{
+    padding-top: 70px; 
+    padding-bottom: 120px;
+ }
+ .container__text h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
     text-align: center;
-    color: #333;
 }
 
+.container__text p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container__logosignin {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    margin-bottom: 20px; /* Khoảng cách dưới logo */
+}
+
+.container__logosignin img {
+    width: 110px;
+    height: 110px;
+}
 .form-container {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* max-width: 600px; */
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-top: 30px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+    display: none; /* Hide labels as they are not in the image */
 }
 
 .form-group input {
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.btn-primary {
-    width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
     font-size: 16px;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.link {
-    display: block;
     text-align: center;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
 }
 
-.link:hover {
+.form-group input::placeholder {
+    color: #888;
+    text-transform: uppercase;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #ccc;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container a {
+    color: #fff;
     text-decoration: underline;
 }
 
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block; /* Đảm bảo nút là khối */
+    margin-left: auto; /* Căn giữa theo chiều ngang */
+    margin-right: auto; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung bên trong nút */
+}
+.return-home {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.return-home a {
+    color: #fff;
+    text-decoration: underline;
+}
+/* làm lại cái này */
 #result-message {
-    text-align: center;
-    margin-top: 20px;
+    background-color: #f0f8ff; /* Màu nền xanh nhạt */
+    color: #333; /* Màu chữ */
+    border: 1px solid #007bff; /* Viền xanh đậm */
+    border-radius: 5px; /* Bo góc */
+    padding: 15px; /* Khoảng cách bên trong */
+    margin-top: 20px; /* Khoảng cách phía trên */
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    max-width: 500px; /* Giới hạn chiều rộng tối đa */
+    margin-left: auto; /* Căn giữa theo chiều ngang */
+    margin-right: auto; /* Căn giữa theo chiều ngang */
 }
 
 #result-message h3 {
-    color: #333;
+    margin: 0; /* Loại bỏ khoảng cách mặc định của thẻ h3 */
+    padding: 0; /* Loại bỏ padding mặc định */
 }

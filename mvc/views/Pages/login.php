@@ -7,26 +7,46 @@
     <link rel="stylesheet" href="/Git/public/css/login.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <div class="form-container">
-        <form action="./Login/KHLogin" method="POST">
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+    <div class="app__container">
+            <div class="container__logosignin">
+                <img src="/Git/public/img/logoweb.png" alt="logoweb">
+            </div>
+            <div class="container__text">
+                <h2>SIGN IN</h2>
+                <p>Enter your email and password used at registration or your PepsiCo Tasty</p><p> Rewards credentials to access your account.</p>
+            </div>
+            <div class="form-container">
+                <form  action="./Login/KHLogin" method="POST">
+                    <div class="form">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    </div>
+                    <button type="submit" name="btnLogin" class="btn btn-primary" style="margin-left: 100px;">Login</button>
+                </form>
+                    <div class="forgot-password"  >
+                        Forget your password? <a href="#">Click here to reset.</a>
+                    </div>
+                    <div class="forgot-password" style="padding-bottom: 10px">
+                        Not yet registered?
+                    </div>
+                    <a href="/Git/Register" class="register-now">REGISTER NOW</a>
+                    </div>
+                    <?php if (isset($_SESSION['error'])): ?>
+    <div class="error-message">
+        <?php 
+            echo htmlspecialchars($_SESSION['error']); // Hiển thị thông báo lỗi
+            unset($_SESSION['error']); // Xóa session sau khi hiển thị
+        ?>
+    </div>
+<?php endif; ?>
             </div>
 
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
-            <button type="submit" name="btnLogin" class="btn btn-primary">Login</button>
-        </form>
-        <a href="/Git/Register" class="link">Register</a>
-        <?php if (isset($data['error'])): ?>
-            <div class="error-message">
-                <?php echo $data['error']; ?>
-            </div>
-        <?php endif; ?>
-    </div>
 </body>
 </html>

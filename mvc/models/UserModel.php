@@ -42,6 +42,19 @@ class UserModel extends DB
         $user = $result->fetch_assoc();
         return $user;
     }
+    public function getUserById($id) {
+        $sql = "SELECT * FROM user WHERE id = ?";
+        $result = $this->execute($sql, ["i", $id]);
+        return $result->fetch_assoc();
+    }
+    public function updateUser($id, $name, $email) {
+        $sql = "UPDATE user SET name = ?, email = ? WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ssi", $name, $email, $id);
+        $result = $stmt->execute();
+        $stmt->close();
+        return $result;
+    }
 
 }
 ?>
