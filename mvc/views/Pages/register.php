@@ -53,12 +53,16 @@
             <?php
             if(isset($data['result'])){
                 if($data['result'] == 1){
-                    echo "Đăng kí thành công";
+                    echo "Registration successful";
                     echo "<script>setTimeout(function(){ window.location.href = '/Git/Login'; }, 2000);</script>";
                 }else if($data['result'] == -1){
-                    echo "Email đã tồn tại. Vui lòng sử dụng email khác.";
-                }else{
-                    echo "Đăng kí thất bại";
+                    echo "Email already exists. Please use a different email.";
+                
+                }else if ($data['result'] == -2) {
+                    echo "Password and confirm password do not match.";
+                } 
+                else{
+                    echo "Registration failed";
                 }
             }
             ?>

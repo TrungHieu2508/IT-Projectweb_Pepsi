@@ -121,24 +121,3 @@
     color: #fff;
     text-decoration: underline;
 }
-/* làm lại cái này */
-#result-message {
-    background-color: #f0f8ff; /* Màu nền xanh nhạt */
-    color: #333; /* Màu chữ */
-    border: 1px solid #007bff; /* Viền xanh đậm */
-    border-radius: 5px; /* Bo góc */
-    padding: 15px; /* Khoảng cách bên trong */
-    margin-top: 20px; /* Khoảng cách phía trên */
-    text-align: center; /* Căn giữa nội dung */
-    font-size: 16px; /* Kích thước chữ */
-    font-weight: bold; /* Chữ đậm */
-    width: 100%; /* Chiếm toàn bộ chiều rộng container */
-    max-width: 500px; /* Giới hạn chiều rộng tối đa */
-    margin-left: auto; /* Căn giữa theo chiều ngang */
-    margin-right: auto; /* Căn giữa theo chiều ngang */
-}
-
-#result-message h3 {
-    margin: 0; /* Loại bỏ khoảng cách mặc định của thẻ h3 */
-    padding: 0; /* Loại bỏ padding mặc định */
-}

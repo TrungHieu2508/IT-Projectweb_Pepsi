@@ -31,7 +31,7 @@
                 <a href="/Git/Login">Log In / Register <br></a>
                 <!-- <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
                 <a href="../Private/recipes.html">Recipes <br></a> -->
-                <a href="#">View Products <br></a>
+                <a href="/Git/Product">View Products <br></a>
                 <a href="#">Local Eats Deserve Pepsi <br></a>
                 <a href="#">Contact Us <br></a>
             </div>

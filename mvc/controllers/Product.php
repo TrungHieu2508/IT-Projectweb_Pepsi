@@ -18,7 +18,7 @@ class Product extends Controller {
         $products = $this->ProductModel->getProductById($id);
 
         $this->view("master1", [ 
-            "page" => "chitiet",
+            "page" => "detail",
             "product" => $products
         ]);
     }

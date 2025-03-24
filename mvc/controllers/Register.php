@@ -18,8 +18,17 @@ class Register extends Controller
             $name = htmlspecialchars(trim($_POST["name"]));
             $email = htmlspecialchars(trim($_POST["email"]));
             $password = $_POST["password"];
+            $confirmPassword = $_POST["confirm_password"];
             $role = 0; // Mặc định vai trò là khách hàng (role = 0)
 
+            if ($password !== $confirmPassword) {
+                $this->view("master1", [
+                    "page" => "register",
+                    "result" => -2 // Mật khẩu không khớp
+                ]);
+                return;
+            }
+    
             // Kiểm tra email trùng lặp
             $existingUser = $this->UserModel->GetUserByEmail($email);
             if ($existingUser) {

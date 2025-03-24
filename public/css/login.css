@@ -108,15 +108,7 @@
 }
 /* làm lại cái này */
 .error-message {
-    background-color: #ffcccc; /* Màu nền đỏ nhạt để biểu thị lỗi */
-    color: #cc0000; /* Màu chữ đỏ đậm */
-    border: 1px solid #cc0000; /* Viền đỏ đậm */
-    border-radius: 5px; /* Bo góc */
-    padding: 10px; /* Khoảng cách bên trong */
     margin-top: 15px; /* Khoảng cách phía trên */
-    text-align: center; /* Căn giữa nội dung */
-    font-size: 14px; /* Kích thước chữ */
-    font-weight: bold; /* Chữ đậm */
     width: 100%; /* Chiếm toàn bộ chiều rộng container */
     max-width: 400px; /* Giới hạn chiều rộng tối đa */
     margin-left: auto; /* Căn giữa theo chiều ngang */
