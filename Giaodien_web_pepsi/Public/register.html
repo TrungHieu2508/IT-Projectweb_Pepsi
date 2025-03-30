@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+</head>
+<body>
+    <div id="app">
+        <div class="app__header">
+            <nav class="header__navbar">    
+                <div class="header__navbar--logo"> <a href="./index.html"><img src="../assets/img/logoweb.png" alt="Logo website"></a></div> 
+                <div class="header__navbar--menu" onclick="toggleMenu()"><img src="../assets/img/Logomenu.png" alt="icon menu"></div>                                             
+            </nav>
+
+            <!-- menu ẩn-->
+        <div class="app__menu--overlay" id="menu">
+            <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
+            <div class="app__menu--logo">
+                <a href="./index.html"><img src="../assets/img/logoweb.png" alt="logo website"></a>
+            </div>
+            <div class="app__menu--content">
+                <a href="../Public/login.html">Log In / Register <br></a>
+                <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
+                <a href="../Public/recipes.html">Recipes <br></a>
+                <a href="../Public/view_product/pepsi.html">View Products <br></a>
+                <a href="../Public/LocalEat.html">Local Eats Deserve Pepsi <br></a>
+                <a href="../Public/Order.html">Contact Us <br></a>
+            </div>
+            <script>
+                function toggleMenu() {
+                document.getElementById("menu").classList.toggle("active");
+            }
+            </script>   
+        </div>
+
+        </div>
+        
+        <!-- Container -->
+        <div class="app__container">
+            <div class="container__logosignin">
+                <img src="../assets/img/logoweb.png" alt="logoweb">
+            </div>
+            <div class="container__text">
+                <h2>REGISTER</h2>
+                <p>Let's start by creating your account</p>
+                
+            </div>
+            <div class="form-container">
+                <form name="registerForm" action="#" method="POST" onsubmit="return validateForm()">
+                    <div class="form">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirm_password" class="form-control" placeholder="Confirm password" required>
+                    </div>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="newsletter">
+                            YES! Sign me up to receive email from PepsiCo Tasty Rewards, PepsiCo and its brands so I never miss out on exciting updates, offers or sweepstakes. You may opt out at ANY time.
+                        </label>
+                    </div>
+                    <button type="submit" name="btnRegister" class="btn btn-primary"  style="margin-left: 180px;">Register</button>
+                </form>
+                <a href="./login.html" class="link" style="font-size: 14px;">Already have an account? Login here</a>
+                <div class="return-home">
+                    To learn more about how we use your information, please read PepsiCo's 
+                    <a href="#">Privacy Policy</a>, <a href="#">Terms of Use</a> and <a href="#">About Our Ads</a> for details.
+                </div>
+            </div>
+
+           
+
+
+        </div>
+        
+        <!-- Footer-->
+        <footer class="app__footer">
+            <div class="app__footer__logo">  <img src="../assets/img/logoweb.png" alt="logo"></div>
+            
+            <div class="app__footer__content">
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">CONTACT US</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/terms-conditions">TERM & CONDITIONS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/privacy-policy">PRIVACY POLICY</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">COPYRIGHT</a></b></li>
+                    <li><b><a href="https://www.pepsicoproductfacts.com/">PRODUCT FACTS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/product-locator">STORE LOCATOR</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://www.pepsicopartners.com/pepsico/en/USD/partner/leadgeneration">SERVE PEPSI</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/about-our-ads">ABOUT OUR ADS</a></b></li>
+                    <li><b><a href="https://www.pepsifrontlinecareers.com/">CAREERS</a></b></li>
+                </ul>
+            </div>
+
+            <div class="app__footer__social" style="margin: 65px 20px;">
+                <ul class="social__icon">
+                    <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="../assets/img/face-book.png" alt="facebook icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="../assets/img/ins.png" alt="instagram icon" style="height: 40px;margin-left:2rem;margin-top:2.5rem ; ;"></a></li>
+                    <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="../assets/img/twitter-sign.png" alt="twitter icon" style="height: 40px;margin-left:2rem;;margin-top:2.5rem ;  "></a></li>
+                    <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="../assets/img/tik-tok.png" alt="tiktok icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="../assets/img/threads.png" alt="threads icon" style="height: 40px; margin-left:2rem;; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="../assets/img/youtube.png" alt="youtube icon" style="height: 50px;margin-left:2rem; margin-top: 3.3rem; "></i></a></li>
+
+                </ul>
+            </div>       
+        </footer>
+
+        
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi.com</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/recipespage.css">
+</head>
+<body>
+    <div id="app">
+        <div class="app__header">
+            <nav class="header__navbar">    
+                <div class="header__navbar--logo"> <a href="./index.html"><img src="../assets/img/logoweb.png" alt="Logo website"></a></div> 
+                <div class="header__navbar--menu" onclick="toggleMenu()"><img src="../assets/img/Logomenu.png" alt="icon menu"></div>                                             
+            </nav>
+
+            <!-- menu ẩn-->
+        <div class="app__menu--overlay" id="menu">
+            <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
+            <div class="app__menu--logo">
+                <a href="./index.html"><img src="../assets/img/logoweb.png" alt="logo website"></a>
+            </div>
+            <div class="app__menu--content">
+                <a href="./login.html">Log In / Register <br></a>
+                <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
+                <a href="../Private/recipes.html">Recipes <br></a>
+                <a href="../Public/view_product/pepsi.html">View Products <br></a>
+                <a href="../Public/LocalEat.html">Local Eats Deserve Pepsi <br></a>
+                <a href="../Public/Order.html">Contact Us <br></a>
+            </div>
+            <script>
+                function toggleMenu() {
+                document.getElementById("menu").classList.toggle("active");
+            }
+            </script>   
+        </div>
+
+        </div>
+        
+        <!-- Container -->
+        <div class="app__container">
+            <div class="container__backgroundrecipes">
+                <img src="../assets/img/recipespage.png" alt="recipes background" >
+            </div>
+            <div class="container__mix">
+                <div class="container__text">
+                    <p>BETTER</p>
+                    <p>WITH</p>
+                </div>
+                <div class="container__logo">
+                    <img src="../assets/img/logoweb.png" alt="logo pepsi">
+                </div>
+            </div>  
+            <div class="container__textp2"><p>Explore some of our favorite seasonal recipes.</p></div>  
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../assets/img/330x331-BUFFALOCHICKENSKILLET.png" alt="BUFFALO CHICKEN SKILLET DIP">
+                        <div class="slide--text"><p>BUFFALO CHICKEN SKILLET DIP</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-LOADEDTAILGATETOTS.png" alt="LOADED TAILGATE TOTS">
+                        <div class="slide--text"><p>LOADED TAILGATE TOTS</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-PIGSINABLANKET.png" alt="ITALIAN SAUSAGE & PEPPERS PIGS IN A BLANKET">
+                        <div class="slide--text"><p>ITALIAN SAUSAGE & PEPPERS PIGS IN A BLANKET</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_101_MTO1_1x1_STILLS_CLEAN.png" alt="PHILLY CHEESESTEAK SLIDERS">
+                        <div class="slide--text"><p>PHILLY CHEESESTEAK SLIDERS</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_102_MTO2_1x1_STILLS_CLEAN (1).png" alt="Chicken Wings">
+                        <div class="slide--text"><p>Chicken Wings</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_103_MTO3_1x1_STILLS_CLEAN.png" alt="POTATO SKIN BITES">
+                        <div class="slide--text"><p>POTATO SKIN BITES</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_104_Recipe-Image_1X1_v3.png" alt="SPINACH PULL APART BREAD">
+                        <div class="slide--text"><p>SPINACH PULL APART BREAD</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_105_STILLS_CLEAN.png" alt="FRENCH DIP PINWHEEL">
+                        <div class="slide--text"><p>FRENCH DIP PINWHEEL</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-USBP2262_PEPC_109_Recipe-Image_1X1_v2 (1).png" alt="MULTIWAY LOADED FRIES 3-WAYS">
+                        <div class="slide--text"><p>MULTIWAY LOADED FRIES 3-WAYS</p></div>
+                     <!-- Thêm lại các slide để tạo hiệu ứng vòng lặp -->
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-BUFFALOCHICKENSKILLET.png" alt="BUFFALO CHICKEN SKILLET DIP">
+                        <div class="slide--text"><p>BUFFALO CHICKEN SKILLET DIP</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/img/330x331-LOADEDTAILGATETOTS.png" alt="LOADED TAILGATE TOTS">
+                        <div class="slide--text"><p>LOADED TAILGATE TOTS</p></div>
+                    </div>
+                    
+                    
+                </div>
+        
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            
+        
+            <script src="../assets/js/recipes.js"></script>
+       
+        </div>
+
+
+        </div>
+        
+        <!-- Footer-->
+        <footer class="app__footer">
+            <div class="app__footer__logo">  <img src="../assets/img/logoweb.png" alt="logo"></div>
+            
+            <div class="app__footer__content">
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">CONTACT US</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/terms-conditions">TERM & CONDITIONS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/privacy-policy">PRIVACY POLICY</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">COPYRIGHT</a></b></li>
+                    <li><b><a href="https://www.pepsicoproductfacts.com/">PRODUCT FACTS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/product-locator">STORE LOCATOR</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://www.pepsicopartners.com/pepsico/en/USD/partner/leadgeneration">SERVE PEPSI</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/about-our-ads">ABOUT OUR ADS</a></b></li>
+                    <li><b><a href="https://www.pepsifrontlinecareers.com/">CAREERS</a></b></li>
+                </ul>
+            </div>
+
+            <div class="app__footer__social" style="margin: 65px 20px;">
+                <ul class="social__icon">
+                    <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="../assets/img/face-book.png" alt="facebook icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="../assets/img/ins.png" alt="instagram icon" style="height: 40px;margin-left:2rem;margin-top:2.5rem ; ;"></a></li>
+                    <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="../assets/img/twitter-sign.png" alt="twitter icon" style="height: 40px;margin-left:2rem;;margin-top:2.5rem ;  "></a></li>
+                    <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="../assets/img/tik-tok.png" alt="tiktok icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="../assets/img/threads.png" alt="threads icon" style="height: 40px; margin-left:2rem;; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="../assets/img/youtube.png" alt="youtube icon" style="height: 50px;margin-left:2rem; margin-top: 3.3rem; "></i></a></li>
+
+                </ul>
+            </div>       
+        </footer>
+
+        
+    </div>
+</body>
+</html>
+
+

@@ -1,11 +1,11 @@
-.app__header{
+#app__header{
     background-color: var(--black-color);/* tam thoithoi*/
     height: 70px;
     position: fixed;
     width: 100%; 
     z-index: 2000;
 }
-.header__navbar{
+#header__navbar{
     display:flex; 
     justify-content: space-between;
 }
@@ -19,7 +19,7 @@
 .header__navbar--menu:active{
     opacity: 0.5;
 }
-.header__navbar--logo img{
+#header__navbar--logo img{
     height:50px; 
     margin: 10px 10px;
     cursor: pointer; 

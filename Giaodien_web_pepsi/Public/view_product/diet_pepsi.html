@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi.com</title>
+    <link rel="stylesheet" href="../../assets/css/viewproduct.css">
+</head>
+<body>
+    <div id="app">
+        <div id="app__header">
+            <nav id="header__navbar">    
+                <div id="header__navbar--logo"> <img src="../../assets/img/logoweb.png" alt="Logo website"></div> 
+                <div class="header__navbar--menu" onclick="toggleMenu()"><img src="../../assets/img/Logomenu.png" alt="icon menu"></div>                                             
+            </nav>
+
+            <!-- menu ẩn-->
+        <div class="app__menu--overlay" id="menu">
+            <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
+            <div class="app__menu--logo">
+                <a href="../index.html"><img src="../../assets/img/logoweb.png" alt="logo website"></a>
+            </div>
+            <div class="app__menu--content">
+                <a href="../../Public/login.html">Log In / Register <br></a>
+                <a href="../../Private/buypepsip1.html">Buy Pepsi <br></a>
+                <a href="../../Public/recipes.html">Recipes <br></a>
+                <a href="../view_product/pepsi.html">View Products <br></a>
+                <a href="../../LocalEat.html">Local Eats Deserve Pepsi <br></a>
+                <a href="../../Public/Order.html">Contact Us <br></a>
+            </div>
+            <script>
+                function toggleMenu() {
+                document.getElementById("menu").classList.toggle("active");
+            }
+            </script>   
+        </div>
+
+        </div>
+        
+        <!-- Container -->
+        <div id ="app__container">
+            <div class="container__products">
+                <div class="container__products--info">
+                    <h2>DIET PEPSI</h2>
+                    <div class="info__line"></div>
+                    <h3>NUTRITION FACTS</h3>
+                    <div class="info__line--bold"></div>
+                    <p style="padding-top: 10px;">Serving Size 12 fl oz</p>
+                    <p>Servings Per Container 1</p>
+                    <p style="padding-bottom: 10px;">Amount Per Serving</p>
+                    <div class="info__line"></div>
+                    <p style="text-align: right; padding-top: 10px;">% Daily Value *</p>
+                    <div class="info__value">
+                        <div class="value__name" style="padding-top: 0;">Calories 0</div>
+                        
+                    </div>
+                    <div class="info__value">
+                        <div class="value__name">Total Fat 0g</div>
+                        <div class="value__person">0%</div>
+                    </div>
+                    <div class="info__value">
+                        <div class="value__name">Sodium 35mg</div>
+                        <div class="value__person">1%</div>
+                    </div>
+                    <div class="info__value">
+                        <div class="value__name">Total Carbohydrate 0g</div>
+                        <div class="value__person">0%</div>
+                    </div>
+                    <div class="info__value">
+                        <div class="value__name">Sugars 0g</div>
+                        
+                    </div>
+                    <div class="info__value">
+                        <div class="value__name" style="padding-bottom: 10px;">Protein 0g</div>
+                        
+                    </div>
+                    <div class="info__line"></div>
+                    <div class="info__para"><p>CARBONATED WATER, CARAMEL COLOR, ASPARTAME, PHOSPHORIC ACID, POTASSIUM BENZOATE (PRESERVES FRESHNESS), CAFFEINE, CITRIC ACID, NATURAL FLAVOR, ACESULFAME POTASSIUM</p></div>
+                    <a href="https://www.pepsicoproductfacts.com/Home/Product?formula=F0000007855&form=RTD&size=12"><h3 style="text-decoration:underline; padding: 20px 0;">MORE NUTRITIONAL INFO</h3></a>
+                    <a href="../../Public/Order.html"><button class="viewProduct__button">ORDER NOW</button></a>
+                </div>
+                <div class="container__products--img"><img src="../../assets/img/diet-pepsi-pdp.jpeg" alt="pepsi"></div>
+                <div id="container__nextproduct">
+                    
+                        <a href="../view_product/pepsi_zero_sugar.html"><img src="../../assets/img/left-arrow.png" alt="left-arrow"  style="width: 37px; height: 35px; position: relative; right: 660px;top: 350px"></a>
+                        <a href="../view_product/Pepsi Wild Cherry and Cream.html"><img src="../../assets/img/right-arrow.png" alt="right-arrow"  style="width: 32px; height: 30px; position: relative; right: 295px;top: 314px"></a>
+                
+                </div>
+
+            </div>
+
+            
+
+        </div>
+        
+        <!-- Footer-->
+        <footer class="app__footer">
+            <div class="app__footer__logo">  <img src="../../assets/img/logoweb.png" alt="logo"></div>
+            
+            <div class="app__footer__content">
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">CONTACT US</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/terms-conditions">TERM & CONDITIONS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/privacy-policy">PRIVACY POLICY</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://contact.pepsico.com/pepsi">COPYRIGHT</a></b></li>
+                    <li><b><a href="https://www.pepsicoproductfacts.com/">PRODUCT FACTS</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/product-locator">STORE LOCATOR</a></b></li>
+                </ul>
+                <ul class="content__list">
+                    <li><b><a href="https://www.pepsicopartners.com/pepsico/en/USD/partner/leadgeneration">SERVE PEPSI</a></b></li>
+                    <li><b><a href="https://contact.pepsico.com/pepsi/about-our-ads">ABOUT OUR ADS</a></b></li>
+                    <li><b><a href="https://www.pepsifrontlinecareers.com/">CAREERS</a></b></li>
+                </ul>
+            </div>
+
+            <div class="app__footer__social" style="margin: 65px 20px;">
+                <ul class="social__icon">
+                    <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="../../assets/img/face-book.png" alt="facebook icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="../../assets/img/ins.png" alt="instagram icon" style="height: 40px;margin-left:2rem;margin-top:2.5rem ; ;"></a></li>
+                    <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="../../assets/img/twitter-sign.png" alt="twitter icon" style="height: 40px;margin-left:2rem;;margin-top:2.5rem ;  "></a></li>
+                    <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="../../assets/img/tik-tok.png" alt="tiktok icon" style="height: 40px; margin-left:2rem; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="../../assets/img/threads.png" alt="threads icon" style="height: 40px; margin-left:2rem;; margin-top:2.5rem ; "></a></li>
+                    <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="../../assets/img/youtube.png" alt="youtube icon" style="height: 50px;margin-left:2rem; margin-top: 3.3rem; "></i></a></li>
+
+                </ul>
+            </div>       
+        </footer>
+
+        
+    </div>
+</body>
+</html>
+
+

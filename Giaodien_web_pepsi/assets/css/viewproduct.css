@@ -1,0 +1,297 @@
+:root{
+    --white-color: #fff; 
+    --black-color: #000; 
+    --text-color: #333; 
+}
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+#app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#app__container {
+    flex: 1; /* Nội dung sẽ mở rộng để đẩy footer xuống */
+   
+}
+body{
+    background-color: black; 
+    color: var(--white-color); 
+   
+}
+html{
+    font-size: 62.5%; /*khi dieu chinh px cho doan van thi 1rem = 10px(1.6rem =16px)*/
+    line-height: 1.6rem;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* Toi uu trai nghiem nguoi dung tren nhieu nen tang */
+.grid{
+    width: 1200px; 
+    max-width: 100%;/*Khi man hinh vuot qua 1200px thi hien thi toi da 100% kich thuoc man hinh*/
+    margin: 0 auto; 
+}
+
+.grid__full-width{
+    width: 100%; 
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+    color:var(--white-color); 
+}
+ul{
+    list-style: none;
+}
+/* Tùy chỉnh thanh cuộn */
+::-webkit-scrollbar {
+    width: 8px; /* Độ rộng thanh cuộn */
+    
+}
+
+/* Nền của thanh cuộn */
+::-webkit-scrollbar-track {
+    background: black; /* Nền màu đen */
+}
+
+/* Màu và kiểu của thanh trượt */
+::-webkit-scrollbar-thumb {
+    background: blue; /* Màu xanh dương */
+    border-radius: 10px; /* Bo góc */
+    
+}
+
+/* Hiệu ứng khi di chuột vào thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background: #031a57; /* Xanh sáng hơn khi hover */
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+
+#app__header{
+    background-color: var(--black-color);/* tam thoithoi*/
+    height: 90px;
+    position: fixed;
+    width: 100%; 
+    z-index: 2000;
+}
+#header__navbar{
+    display:flex; 
+    justify-content: space-between;
+}
+
+.header__navbar--menu{
+    font-size: 40px;
+    margin: 20px 25px;
+    cursor: pointer;
+    z-index: 1000; 
+}
+.header__navbar--menu:active{
+    opacity: 0.5;
+}
+#header__navbar--logo img{
+    height:70px; 
+    margin: 10px 10px;
+    cursor: pointer; 
+}
+#app__container{
+   padding-top: 90px; 
+   
+}
+
+.app__footer{
+    display:flex;
+    width: 100%;
+    background-color: #0025ff;
+    color: white;
+    height: 300px; 
+    padding: 20px;
+}
+.app__footer__logo img{
+    height: 150px; 
+    margin-top: 60px; 
+    cursor: pointer;
+}
+.app__footer__content{
+    display: flex; 
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-size: 2rem;
+    /* margin-right: 280px; */
+    margin-left: 4rem;
+    line-height: 2.5rem;
+    font-weight:bolder;
+}
+.content__list{
+  margin: 0 20px;
+}
+.social__icon{
+    display: flex; 
+    justify-content: center;   
+    margin-right: 1rem; 
+    font-size: 4.3rem;
+    /* margin: 0 100px;  */
+}
+
+.app__menu--overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 46%;
+    height: 100%;
+    background-color: #0025ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    z-index: 1000;
+    border-top-left-radius: 30px;
+    text-align: center;
+}
+
+.app__menu--overlay.active{
+      transform: translateX(0);
+}
+.app__menu--logo{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.app__menu--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 85px;
+    text-align: center; /* Căn giữa text */
+}
+.app__menu--content a:hover{
+    color: rgb(230, 62, 62)
+}
+/* close menu */
+.app__menu__close--btn{
+    position: absolute; 
+    top: 2rem; 
+    right: 2rem; 
+    color:var(--white-color); 
+    cursor:pointer; 
+    font-size: 30px; 
+}
+.app__menu__close--btn:active{
+    opacity: .5;
+}
+
+.viewProduct__button{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white-color);
+    background-color: #0025ff;
+    width:200px;
+    height: 60px;
+    border-radius: 80px;
+    text-align: center;
+    border-color: #0025ff;
+    transition: background-color .3s ease, color .4s ease .2s;
+   
+}
+
+.viewProduct__button:hover{
+    background-color: var(--white-color);
+    color:#0025ff; 
+
+}
+
+.viewProduct__button:active{
+    opacity: .5;
+}
+
+.container__products{
+    display:flex; 
+}
+
+
+
+.container__products--img{
+    width: 120%;
+    height: 100%;
+    
+}
+
+.container__products--img img{
+    width: 110%; 
+    height: 100%;
+    margin-left: 80px; 
+}
+
+.container__products--info{
+    position:relative;
+    left: 150px; 
+    top: 50px; 
+    color:var(--white-color); 
+    font-size: 14px;
+    width: 430px;
+    /* line-height: 10px; */
+}
+
+.info__line{
+    width: 100%; 
+    height: 1px; 
+    background-color: var(--white-color);
+}
+
+.container__products--info h2{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.container__products--info h3{
+    font-size: 20px;
+    padding: 8px 0; 
+}
+.info__line--bold{
+    width: 100%; 
+    height: 5px; 
+    background-color: var(--white-color);
+}
+
+.info__value{
+    display: flex;
+    justify-content: space-between;
+}
+
+.value__name{
+    padding-top: 5px;
+}
+
+.info__para{
+    font-size: 12px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+

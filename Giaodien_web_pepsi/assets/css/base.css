@@ -18,7 +18,7 @@ html, body {
     font-family: sans-serif;
 }
 
-.app {
+#app {
     flex: 1;
     display: flex;
     flex-direction: column;

@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <div class="app">
-        <div class="app__header">
-            <nav class="header__navbar">    
-                <div class="header__navbar--logo"> <img src="../assets/img/logoweb.png" alt="Logo website"></div> 
+    <div id="app">
+        <div id="app__header">
+            <nav id="header__navbar">    
+                <div id="header__navbar--logo"> <a href="./index.html"><img src="../assets/img/logoweb.png" alt="Logo website"></a></div> 
                 <div class="header__navbar--menu" onclick="toggleMenu()"><img src="../assets/img/Logomenu.png" alt="icon menu"></div>                                             
             </nav>
 
@@ -19,14 +19,14 @@
         <div class="app__menu--overlay" id="menu">
             <div class="app__menu__close--btn" onclick="toggleMenu()">✖</div>
             <div class="app__menu--logo">
-                <img src="../assets/img/logoweb.png" alt="logo website">
+                <a href="./index.html"><img src="../assets/img/logoweb.png" alt="logo website"></a>
             </div>
             <div class="app__menu--content">
-                <a href="#">Log In / Register <br></a>
+                <a href="../Public/login.html">Log In / Register <br></a>
                 <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
-                <a href="#">Recipes <br></a>
-                <a href="#">View Products <br></a>
-                <a href="#">Local Eats Deserve Pepsi <br></a>
+                <a href="../Public/recipes.html">Recipes <br></a>
+                <a href="../Public/view_product/pepsi.html">View Products <br></a>
+                <a href="./LocalEat.html">Local Eats Deserve Pepsi <br></a>
                 <a href="../Public/Order.html">Contact Us <br></a>
             </div>
             <script>
@@ -39,7 +39,7 @@
         </div>
         
         <!-- Container -->
-        <div class="app__container">
+        <div class ="app__container">
 
            <div class="app__container__welcome">
                 <div class="welcome__img"><img src="../assets/img/pepsi-0sugar.png" alt="pepsi nosugar"></div>
@@ -58,7 +58,7 @@
                 <div class="style__content" style="display: flex; flex-direction: column;">
                     <div class="content__img"><img src="../assets/img/content pepsi.png" alt="content denim jacket"></div>
                     <div class="content__text" style="font-size: 23px; line-height: 20px; font-weight: 900; margin-left: 80px;margin-top: 15px;"><p>Enter now for a chance to win this limited-</p><br><p>edition item. *</p></div>
-                    <a href="#"><button class="content__sign--button">SIGN IN TO ENTER</button></a>
+                    <a href="../Public/login.html"><button class="content__sign--button">SIGN IN TO ENTER</button></a>
                     <div class="content__msg"><p>U.S. res, 18+ (19+ in AL/NE). Ends 3/31/25. Limit one entry per person/email address </p><br><p>per day. Subject to Official Rules.</p></div>
                 </div>
            </div>
@@ -67,7 +67,7 @@
                 <div class="viewProduct__video">
                     <video src="../assets/img/Pepsi Product Carousel Video.mp4" controls autoplay loop muted></video>
                 </div>
-                <a href="#"><button class="viewProduct__button">VIEW PRODUCTS</button></a>
+                <a href="./view_product/pepsi.html"><button class="viewProduct__button">VIEW PRODUCTS</button></a>
            </div>
 
            <div class="app__container__checkItOut">
@@ -87,7 +87,7 @@
                 <div class="viewRecipes__video" style="position: relative; bottom:195px;">
                     <video src="../assets/img/Marketing pepsi video.mp4" controls autoplay loop muted></video>
                 </div>
-                <a href="#"><button class="viewRecipes__button">VIEW RECIPES</button></a>
+                <a href="./recipes.html"><button class="viewRecipes__button">VIEW RECIPES</button></a>
            </div>
 
            <div class="app__container__pulse">
