@@ -28,12 +28,17 @@
                 <img src="/Git/public/img/logoweb.png" alt="logo website">
             </div>
             <div class="app__menu--content">
+            <?php if (isset($_SESSION['user'])): ?>
+                <a>Welcome, <?php echo htmlspecialchars($_SESSION['user']['name']); ?> <br></a>
+                <a href="/Git/MyAccount/Show">My Account <br></a>
+            <?php else: ?>
                 <a href="/Git/Login">Log In / Register <br></a>
-                <!-- <a href="../Private/buypepsip1.html">Buy Pepsi <br></a>
-                <a href="../Private/recipes.html">Recipes <br></a> -->
+                 <?php endif; ?>
+                 <a href="/Git/Buy">Buy Pepsi <br></a>
+                <a href="#">Recipes <br></a>
                 <a href="/Git/Product">View Products <br></a>
                 <a href="#">Local Eats Deserve Pepsi <br></a>
-                <a href="#">Contact Us <br></a>
+                <a href="/Git/Contact">Contact Us <br></a>
             </div>
             <script>
                 function toggleMenu() {

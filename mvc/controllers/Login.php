@@ -22,6 +22,7 @@ class Login extends Controller
               // Kiểm tra người dùng và xác minh mật khẩu
               if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user'] = $user;
+                $_SESSION['user_logged_in'] = true;
 
                 // Kiểm tra vai trò và chuyển hướng
                 if ($user['role'] == 1) {

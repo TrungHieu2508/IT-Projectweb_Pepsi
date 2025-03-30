@@ -22,7 +22,7 @@
                 </div>
                 <table>
                     <tr>
-                        <th>Name</th>
+                        
                         <td><?php echo $product['name']; ?></td>
                     </tr>
                     <tr>

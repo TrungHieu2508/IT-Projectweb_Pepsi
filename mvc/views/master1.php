@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepsi.com</title>
-    <link rel="stylesheet" href="/Git/public/css/main.css">
+    <!-- <link rel="stylesheet" href="/Git/public/css/main.css"> -->
 </head>
 <body>
     <?php 
