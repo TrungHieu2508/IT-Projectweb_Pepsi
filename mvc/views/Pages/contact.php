@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/Git/public/css/contact.css">
 </head>
 <body>
+<script src="/Git/public/js/contact.js"></script>
+
 <div class="app__container">
             <div class="container__logo--header">
             <a href="/Git/Home">

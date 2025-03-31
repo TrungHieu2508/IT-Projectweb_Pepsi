@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="/Git/public/css/block.css">
 </head>
 <body>
-<!-- <script src="../assets/js/buypepsi.js"></script> -->
     <div class="app">
         <div class="app__header">
             <nav class="header__navbar">
                 <ul class="navbar__content">
                     <li><a href="/Git/Home">Home</a></li>
-                    <li><a href="#">Recipes</a></li>
+                    <li><a href="/Git/Recipes">Recipes</a></li>
                     <li><a href="/Git/Product">View Products</a></li>
-                    <li><a href="/Git/public/LocalEat.html">Local Eats Deserve Pepsi</a></li>
+                    <li><a href="/Git/Local">Local Eats Deserve Pepsi</a></li>
                     <li><a href="/Git/Contact">Contact us</a></li>
                 </ul>
             </nav>
