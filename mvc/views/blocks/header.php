@@ -37,7 +37,7 @@
                  <a href="/Git/Buy">Buy Pepsi <br></a>
                 <a href="#">Recipes <br></a>
                 <a href="/Git/Product">View Products <br></a>
-                <a href="#">Local Eats Deserve Pepsi <br></a>
+                <a href="/Git/Local">Local Eats Deserve Pepsi <br></a>
                 <a href="/Git/Contact">Contact Us <br></a>
             </div>
             <script>
