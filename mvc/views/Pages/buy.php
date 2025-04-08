@@ -89,7 +89,7 @@
             <p>Viewing Products 1 - 12 of 24</p>
         </div>
         <div class="nextPage__Btn">
-            <a href="/Git/Buy2"><button>Next Page</button></a>
+            <a href="/Git/buy"><button>Next Page</button></a>
         </div>
     </div>
     

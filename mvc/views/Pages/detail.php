@@ -71,5 +71,14 @@
             <p>Product not found.</p>
         <?php endif; ?>
     </div>
+    <div class="navigation-buttons" style="text-align: center; margin-top: 20px;">
+    <?php if (!empty($data['prev_id'])): ?>
+        <a href="/Git/Product/Previous/<?php echo $product['id']; ?>" class="btn btn-secondary">Previous</a>
+    <?php endif; ?>
+    
+    <?php if (!empty($data['next_id'])): ?>
+        <a href="/Git/Product/Next/<?php echo $product['id']; ?>" class="btn btn-secondary">Next</a>
+    <?php endif; ?>
+</div>
 </body>
 </html>
