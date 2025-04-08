@@ -55,7 +55,7 @@
                     <input type="text" id="searchBox" placeholder="Search by Keyword ...">
                 </div>
             <div class="product__showProduct">
-                <div class="showProduct_row">
+                <div class="showProduct_grid">
                 <?php if (isset($data['product']) && !empty($data['product'])): ?>
                 <?php foreach ($data['product'] as $products): ?>
                 <?php
@@ -83,11 +83,15 @@
         <?php endif; ?>
           
     </div>
-</div><div class="product__nextPage">
-                    <div class="nextPage__text"><p>Viewing Products 1 - 12 of 24</p></div>
-                    <div class="nextPage__Btn"><a href="/Git/Buy2"><button>Next Page</button></a></div>
-                </div>
-            </div>    
+</div
+<div class="product__nextPage">
+        <div class="nextPage__text">
+            <p>Viewing Products 1 - 12 of 24</p>
+        </div>
+        <div class="nextPage__Btn">
+            <a href="/Git/Buy2"><button>Next Page</button></a>
+        </div>
+    </div>
     
 </body>
 </html>
