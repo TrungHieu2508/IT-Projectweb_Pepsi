@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy</title>
-    <link rel="stylesheet" href="/Git/public/css/buy.css">
+    <link rel="stylesheet" href="/Git/public/css/block.css">
 </head>
 <body>
-<script src="/Git/public/js/buy.js"></script>
 <div class="app__container">
             <div class="container__logo--header">
                 <a href="/Git/Home"><img src="/Git/public/img/logoweb.png" alt="logo"></a>
@@ -40,14 +39,14 @@
                             </div>
                         </div>
                         <div class="product__header__findBtn">
-    <?php if (isset($_SESSION['user'])): ?>
-        <!-- Nếu đã đăng nhập -->
-        <a href="/Git/Contact"><button>Order</button></a>
-    <?php else: ?>
-        <!-- Nếu chưa đăng nhập -->
-        <a href="/Git/Login"><button>Order</button></a>
-    <?php endif; ?>
-</div>
+                    <?php if (isset($_SESSION['user'])): ?>
+                     <!-- Nếu đã đăng nhập -->
+                     <a href="/Git/Contact"><button>Order</button></a>
+                    <?php else: ?>
+                     <!-- Nếu chưa đăng nhập -->
+                     <a href="/Git/Login"><button>Order</button></a>
+                 <?php endif; ?>
+                    </div>
                     </div>
                 </div>
                 <div class="product__search">
@@ -86,12 +85,14 @@
 </div
 <div class="product__nextPage">
         <div class="nextPage__text">
-            <p>Viewing Products 1 - 12 of 24</p>
+            <!-- <p>Viewing Products 1 - 12 of 24</p> -->
         </div>
         <div class="nextPage__Btn">
-            <a href="/Git/buy"><button>Next Page</button></a>
+            <a href="/Git/Home"><button>home</button></a>
         </div>
     </div>
-    
+
+    <script src="/Git/public/js/buy.js"></script>
+
 </body>
 </html>

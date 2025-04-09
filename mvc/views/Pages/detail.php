@@ -27,7 +27,7 @@
                     </tr>
                     <tr>
                         <th>Serving Size</th>
-                        <td><?php echo $product['size']; ?> fl oz</td>
+                        <td><?php echo $product['size']; ?></td>
                     </tr>
                     <tr>
                         <th>Calories</th>
