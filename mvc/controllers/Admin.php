@@ -12,7 +12,7 @@ class Admin extends Controller {
         // Kiểm tra xem người dùng đã đăng nhập và có vai trò là admin (role = 1)
         if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 1) {
             $this->view("master2", [
-                "admin" => "admin_dashboard"
+                "admin" => "Admin_dashboard"
             ]);
         } else {
             // Nếu không phải admin, chuyển hướng đến trang khách hàng

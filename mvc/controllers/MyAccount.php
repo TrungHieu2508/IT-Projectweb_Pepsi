@@ -9,7 +9,7 @@ class MyAccount extends Controller {
         }
         
         $this->view("master1", [
-        "page"=>"myaccount"
+        "page"=>"my_account"
     ]);
   }
 }

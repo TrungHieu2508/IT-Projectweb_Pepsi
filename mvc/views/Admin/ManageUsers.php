@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Users</title>
-    <link rel="stylesheet" href="/Git/public/css/ManageUsers.css">
+    <link rel="stylesheet" href="/Git/public/css/manage_users.css">
 </head>
 <body>
     <div class="manage-users-container">
