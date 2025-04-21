@@ -8,5 +8,19 @@ class ContactModel extends DB {
         $stmt->close();
         return $result;
     }
+    public function getAllContacts() {
+        $sql = "SELECT * FROM contact";
+        $result = $this->conn->query($sql);
+        $contacts = [];
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $contacts[] = $row;
+            }
+        }
+
+        return $contacts;
+    }
 }
+
 ?>
