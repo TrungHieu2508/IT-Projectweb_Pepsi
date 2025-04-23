@@ -20,13 +20,15 @@ class Contact extends Controller {
             $address = htmlspecialchars(trim($_POST['address']));
             $reason = htmlspecialchars(trim($_POST['contact-reason']));
             $message = htmlspecialchars(trim($_POST['message']));
+            $date = date('Y-m-d');
 
-            $result = $this->ContactModel->InsertContact($name, $phone, $email, $address, $reason, $message);
+            $result = $this->ContactModel->InsertContact($name, $phone, $email, $address, $reason, $message, $date);
 
             if ($result) {
                 $this->view("master3", [
                     "page" => "contact",
                     "result" => "Your message has been sent successfully!"
+                    
                 ]);
             } else {
                 $this->view("master3", [

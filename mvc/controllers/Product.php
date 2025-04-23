@@ -28,7 +28,6 @@ class Product extends Controller {
     public function Next($current_id) {
         $next_id = $this->ProductModel->getNextProductId($current_id);
         if (!$next_id) {
-            // Nếu không có sản phẩm tiếp theo, quay về sản phẩm đầu tiên
             $next_id = $this->ProductModel->getFirstProductId();
         }
         header("Location: /Git/Product/Detail/" . $next_id);
@@ -37,7 +36,6 @@ class Product extends Controller {
     public function Previous($current_id) {
         $prev_id = $this->ProductModel->getPreviousProductId($current_id);
         if (!$prev_id) {
-            // Nếu không có sản phẩm trước đó, chuyển đến sản phẩm cuối cùng
             $prev_id = $this->ProductModel->getLastProductId();
         }
         header("Location: /Git/Product/Detail/" . $prev_id);

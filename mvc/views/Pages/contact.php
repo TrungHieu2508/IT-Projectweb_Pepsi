@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/Git/public/css/contact.css">
 </head>
 <body>
-<script src="/Git/public/js/contact.js"></script>
+<!-- <script src="/Git/public/js/contact.js"></script> -->
 
 <div class="app__container">
             <div class="container__logo--header">
@@ -19,7 +19,8 @@
             </div>
             <div class="container__pepsiText"><p>Pepsi Order</p></div>
             <a href="#"><button class="container__pepsiBtn">New offers and gifts</button></a>
-            <div class="container__textHeader"><p>Explore 24 Pepsi products, compare prices, and enjoy exciting promotions. Find your favorite Pepsi and place your order easily! Enjoy quick delivery  and  </p>exclusive deals available only online. Don’t miss out on your Pepsi favorites!</p></div>
+            <div class="container__textHeader">
+                <p>Explore Pepsi products, compare prices, and enjoy exciting promotions. Find your favorite Pepsi and place your order easily! Enjoy quick delivery  and  </p>exclusive deals available only online. Don’t miss out on your Pepsi favorites!</p></div>
             <div class="container__form-product">
                 <form class="form" id="orderForm" action="/Git/Contact/Submit" method="post">
                     <div class="form__row">
@@ -53,14 +54,21 @@
                                 <textarea name="message" id="message" rows="8" placeholder="MESSAGE" required></textarea>
                             </div>  
                             <div class="form__group"></div> 
+                            <?php if (isset($_SESSION['user'])): ?>
+                             <!-- Nếu đã đăng nhập -->
                             <button type="submit" class="form__btn">Send</button>
+                                <?php else: ?>
+                            <!-- Nếu chưa đăng nhập -->
+                            <a href="/Git/Login"><button type="button" class="form__btn">Send</button></a>
+                            <?php endif; ?>
+                            
                         </div>
                     </div>
                     <?php if (isset($data['result'])): ?>
-    <div id="result-message">
-        <h3><?php echo htmlspecialchars($data['result']); ?></h3>
-    </div>
-<?php endif; ?>
+                    <div id="result-message">
+                <h3><?php echo htmlspecialchars($data['result']); ?></h3>
+                </div>
+            <?php endif; ?>
                 </form>
                 
                 

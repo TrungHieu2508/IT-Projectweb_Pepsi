@@ -37,7 +37,7 @@ class Admin extends Controller {
         ]);
     }
     public function ManageContact() {
-        $contact = $this->ContactModel->getAllContacts();
+        $contact = $this->ContactModel->getContacts();
         $this->view("master2", [
             "admin" => "contacts",
             "contacts" => $contact
@@ -45,7 +45,7 @@ class Admin extends Controller {
    
     }
     public function ManageUsers() {
-        $user = $this->UserModel->getAllUsers();
+        $user = $this->UserModel->getUsers();
         $this->view("master2", [
             "admin" => "customer",
             "users" => $user

@@ -11,19 +11,20 @@ class UserModel extends DB
         $this->result = $stmt->get_result();
         return $this->result;
     }
-    public function getAllUsers() {
-        $sql = "SELECT * FROM user";
-        $result = $this->execute($sql);
-        $user = [];
+    
+    public function getUsers() {
+    $sql = "SELECT id,name, email, password, role FROM user"; 
+    $result = $this->execute($sql);
+    $user = [];
 
-        if ($result) {
-            while ($row = $result->fetch_assoc()) {
-                $user[] = $row;
-            }
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $user[] = $row;
         }
-
-        return $user;
     }
+
+    return $user;
+}
 
     public function InsertData($name, $email, $password, $role)
     {

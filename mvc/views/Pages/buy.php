@@ -16,10 +16,22 @@
             </div>
             <div class="container__pepsiText"><p>Pepsi Explorer</p></div>
             <a href="#"><button class="container__pepsiBtn">New offers and gifts</button></a>
-            <div class="container__textHeader"><p>Product Locator - Pepsi: Explore 24 Pepsi products, compare prices, and enjoy exclusive promotions. From classics to new flavors, find your perfect Pepsi.</p><p> Use search and filters to discover favorites and special offers.</p></div>
+            <div class="container__textHeader">
+            Product Locator - Pepsi: Explore 
+
+        <?php echo isset($data['product']) ? count($data['product']) : 0; ?> 
+
+        Pepsi products, compare prices, and enjoy exclusive promotions. 
+        From classics to new flavors, find your perfect Pepsi.
+        <p> Use search and filters to discover favorites and special offers.</p></div>
             <div class="container__product">
                 <div class="product__header">
-                    <div class="product__header__text"><p>Select one or more products to begin.</p><br><p style="text-align: center;">24 Products Found <span style="color:#0025ff;text-decoration: underline; cursor:pointer">Pepsi</span></p></div>
+                    <div class="product__header__text">
+                        <p>Select one or more products to begin.</p><br>
+                        <p style="text-align: center;">
+                        <?php echo isset($data['product']) ? count($data['product']) : 0; ?> Products Found 
+                            
+                        <span style="color:#0025ff;text-decoration: underline; cursor:pointer">Pepsi</span></p></div>
                      <!-- layout cart -->
                      <div class="product__header__findProduct">
                         <div class="product__header__shopping">

@@ -31,6 +31,7 @@
 						<th>Address</th>
 						<th>Reason To Contact</th>
 						<th>Message</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +46,7 @@
                         <td><?php echo htmlspecialchars($contact['address']); ?></td>
                         <td><?php echo htmlspecialchars($contact['reason']); ?></td>
                         <td><?php echo htmlspecialchars($contact['mess']); ?></td>
+                        <td><?php echo htmlspecialchars($contact['date_sent']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
