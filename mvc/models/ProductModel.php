@@ -23,6 +23,19 @@ class ProductModel extends DB {
 
         return $products;
     }
+    public function getProducts() {
+        $sql = "SELECT id, name, image FROM products WHERE hidden = 0"; // Lấy sản phẩm không bị ẩn
+        $result = $this->execute($sql);
+        $products = [];
+    
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $products[] = $row;
+            }
+        }
+    
+        return $products;
+    }
     public function getProductById($id) {
         $sql = "SELECT * FROM products WHERE id = $id";
         $result = $this->execute($sql);

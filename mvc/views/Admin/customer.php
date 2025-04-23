@@ -11,7 +11,12 @@
 	<title>AdminHub</title>
 </head>
 <body>
-
+<?php if (isset($_SESSION['message'])): ?>
+    <script>
+        alert('<?php echo htmlspecialchars($_SESSION['message']); ?>');
+    </script>
+    <?php unset($_SESSION['message']); ?>
+<?php endif; ?>
 
         <!--MAIN-->
         <div id="container">
@@ -19,6 +24,7 @@
             <h3>Manage Users</h3>
             <p>User List</p>
         </div>
+        
         <div id="table__user">
 		<?php if (isset($data['users']) && !empty($data['users'])): ?>
 
@@ -40,7 +46,9 @@
                                 <td><?php echo $user['email']; ?></td>
                                 <td>
                                     <a href="/Git/Admin/EditUser/<?php echo $user['id']; ?>">Edit</a>
-                                    <a href="/Git/Admin/DeleteUser/<?php echo $user['id']; ?>">Delete</a>
+                                    <a href="/Git/Admin/DeleteUser/<?php echo $user['id']; ?>"
+                                    onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -49,7 +57,9 @@
 			<?php else: ?>
                 <p>No users found.</p>
             <?php endif; ?>
+            
         </div>
+        
         </div>
     </section>
     <script src="/Git/public/js/customer.js"></script>

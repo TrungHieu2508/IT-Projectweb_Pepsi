@@ -38,15 +38,13 @@
                     </div>
                     <a href="/Git/Register" class="register-now">REGISTER NOW</a>
                     </div>
-                    <?php if (isset($_SESSION['error'])): ?>
-    <div class="error-message">
-        <?php 
-            echo htmlspecialchars($_SESSION['error']); // Hiển thị thông báo lỗi
-            unset($_SESSION['error']); // Xóa session sau khi hiển thị
-        ?>
-    </div>
-<?php endif; ?>
-            </div>
+        <?php if (isset($_SESSION['error'])): ?>
+            <script>
+                alert('<?php echo htmlspecialchars($_SESSION['error']); ?>');
+            </script>
+            <?php unset($_SESSION['error']); ?>
+        <?php endif; ?>
+</div>
 
 </body>
 </html>

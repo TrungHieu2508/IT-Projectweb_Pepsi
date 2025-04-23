@@ -13,7 +13,7 @@ class UserModel extends DB
     }
     
     public function getUsers() {
-    $sql = "SELECT id,name, email, password, role FROM user"; 
+    $sql = "SELECT id,name, email FROM user WHERE hidden = 0"; 
     $result = $this->execute($sql);
     $user = [];
 
@@ -48,13 +48,13 @@ class UserModel extends DB
         $result = $this->execute($sql, ["i", $id]);
         return $result->fetch_assoc();
     }
-    public function updateUser($id, $name, $email) {
-        $sql = "UPDATE user SET name = ?, email = ? WHERE id = ?";
+    public function deleteUser($id) {
+        $sql = "DELETE FROM user WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ssi", $name, $email, $id);
+        $stmt->bind_param("i", $id);
         $result = $stmt->execute();
         $stmt->close();
-        return $result;
+        return $result; 
     }
 
 }

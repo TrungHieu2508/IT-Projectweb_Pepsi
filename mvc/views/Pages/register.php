@@ -17,7 +17,7 @@
         <p>Let's start by creating your account</p>
     </div>
     <div class="form-container">
-        <form name="registerForm" action="/Git/Register/KHRegister" method="POST" onsubmit="return validateForm()">
+        <form name="registerForm" action="/Git/Register/KHRegister" method="POST" onsubmit="return addEventListener()">
             <div class="form">
                 <div class="form-group">
                     <input type="text" name="name" class="form-control" placeholder="Enter username" required>
@@ -48,21 +48,18 @@
             To learn more about how we use your information, please read PepsiCo's 
             <a href="#">Privacy Policy</a>, <a href="#">Terms of Use</a> and <a href="#">About Our Ads</a> for details.
         </div>
-        <div id="result-message">
+        <div id="result-message" style="display: none;"></div>
             <h3>
             <?php
-            if(isset($data['result'])){
-                if($data['result'] == 1){
-                    echo "Registration successful";
-                    echo "<script>setTimeout(function(){ window.location.href = '/Git/Login'; }, 2000);</script>";
-                }else if($data['result'] == -1){
-                    echo "Email already exists. Please use a different email.";
-                
-                }else if ($data['result'] == -2) {
-                    echo "Password and confirm password do not match.";
-                } 
-                else{
-                    echo "Registration failed";
+            if (isset($data['result'])) {
+                if ($data['result'] == 1) {
+                    echo "<script>alert('Registration successful'); setTimeout(function(){ window.location.href = '/Git/Login'; }, 1000);</script>";
+                } else if ($data['result'] == -1) {
+                    echo "<script>alert('Email already exists. Please use a different email.');</script>";
+                } else if ($data['result'] == -2) {
+                    echo "<script>alert('Password and confirm password do not match.');</script>";
+                } else {
+                    echo "<script>alert('Registration failed');</script>";
                 }
             }
             ?>
@@ -70,6 +67,7 @@
         </div>
     </div>
 </div>
+<script src="/Git/public/js/register.js"></script>
 </body>
 </html>
 
