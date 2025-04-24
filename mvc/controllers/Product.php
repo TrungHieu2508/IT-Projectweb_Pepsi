@@ -24,6 +24,7 @@ class Product extends Controller {
             "prev_id" => $this->ProductModel->getPreviousProductId($id)
         ]);
     }
+
     
     public function Next($current_id) {
         $next_id = $this->ProductModel->getNextProductId($current_id);

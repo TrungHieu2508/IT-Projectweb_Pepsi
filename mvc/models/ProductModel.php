@@ -2,21 +2,24 @@
 class ProductModel extends DB {
 
 
+    // public function getAllProducts() {
+    //     $sql = "SELECT * FROM products";
+    //     $result = $this->execute($sql);
+    //     $products = [];
+
+    //     if ($result) {
+    //         while ($row = $result->fetch_assoc()) {
+    //             $products[] = $row;
+    //         }
+    //     }
+
+    //     return $products;
+    // }
     public function getAllProducts() {
-        $sql = "SELECT * FROM products";
-        $result = $this->execute($sql);
-        $products = [];
-
-        if ($result) {
-            while ($row = $result->fetch_assoc()) {
-                $products[] = $row;
-            }
-        }
-
-        return $products;
-    }
-    public function getProducts() {
-        $sql = "SELECT id, name, image FROM products WHERE hidden = 0"; // Lấy sản phẩm không bị ẩn
+        $sql = "SELECT id, name, img,size,calories,total_fat,value_fat
+        ,sodium,value_sodium,total_carbohydrates,value_Carbohydrate,
+        sugars,protein,components
+        FROM products ";
         $result = $this->execute($sql);
         $products = [];
     
@@ -67,11 +70,12 @@ class ProductModel extends DB {
         return $row ? $row['id'] : null;
     }
     public function countProducts() {
-        $sql = "SELECT COUNT(*) AS total FROM products"; // Đếm tất cả sản phẩm
+        $sql = "SELECT COUNT(*) AS total FROM products"; 
         $result = $this->execute($sql);
         $row = $result->fetch_assoc();
         return $row['total'];
     }
+    
   
     
 }
