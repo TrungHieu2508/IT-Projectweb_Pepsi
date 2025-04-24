@@ -44,13 +44,14 @@
 								<td><?php echo $i++; ?></td>
                                 <td><?php echo $user['name']; ?></td>
                                 <td><?php echo $user['email']; ?></td>
-                                <td>
-                                    <a href="/Git/Admin/EditUser/<?php echo $user['id']; ?>">Edit</a>
-                                    <a href="/Git/Admin/DeleteUser/<?php echo $user['id']; ?>"
-                                    onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
-
-                                </td>
-                            </tr>
+                                <td class="action__btn">
+                                <!-- <form action="/Git/Admin/<?php echo $products['id']; ?>" method="POST" style="display:inline;">
+                                    <button type="submit" name="action" value="edit" class="edit__btn">Edit</button>
+                                </form> -->
+                                <form action="/Git/Admin/Delete<?php echo $products['id']; ?>" method="POST" style="display:inline;">
+                                    <button type="submit" name="action" value="delete" class="delete__btn" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
+                                </form>
+                            </td>
                         <?php endforeach; ?>
                 </tbody>
             </table>

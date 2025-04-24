@@ -42,7 +42,7 @@
 					<img src="/Git/public/img/visitors.png" alt="visitors" style="width: 60px;">
 					<span class="text">
 					<h3><?php echo isset($data['userCount']) ? $data['userCount'] : 0; ?></h3>
-						<p>Visitors</p>
+						<p>User</p>
 					</span>
 				</li>
 				<li>
