@@ -1,0 +1,28 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center; /* Căn giữa danh sách sản phẩm */
+    align-items: center;
+    text-align: center;
+}
+
+.product-item {
+    width: 200px; /* Định kích thước cố định cho sản phẩm */
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
