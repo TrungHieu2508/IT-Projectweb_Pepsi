@@ -20,11 +20,11 @@
 					<h1>Dashboard</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Dashboard</a>
+							<a>Dashboard</a>
 						</li>
 						<img src="/Git/public/img/arrow.png" alt="arrow" style="width: 20px;">
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="/Git/Home">Home</a>
 						</li>
 					</ul>
 				</div>
@@ -32,24 +32,24 @@
 
 			<ul class="box-info">
 				<li>
-					<img src="/Git/public/img/order.png" alt="neworder">
+					<img src="/Git/public/img/neworder.png" alt="neworder">
 					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
+					<h3><?php echo isset($data['orderCount']) ? $data['orderCount'] : 0; ?></h3>
+					<p>New Order</p>
 					</span>
 				</li>
 				<li>
 					<img src="/Git/public/img/visitors.png" alt="visitors" style="width: 60px;">
 					<span class="text">
-						<h3>2834</h3>
+					<h3><?php echo isset($data['userCount']) ? $data['userCount'] : 0; ?></h3>
 						<p>Visitors</p>
 					</span>
 				</li>
 				<li>
 					<img src="/Git/public/img/totalproduct.png" alt="totalproduct" style="width: 60px;">
 					<span class="text">
-						<h3>24</h3>
-						<p>Total product</p>
+					<h3><?php echo isset($data['productCount']) ? $data['productCount'] : 0; ?></h3>
+					<p>Total product</p>
 					</span>
 				</li>
 			</ul>
@@ -70,50 +70,37 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<img src="/Git/public/img/sieunhanden.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="/Git/public/img/sieunhando.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="/Git/public/img/sieunhanhong.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="/Git/public/img/sieunhanxanh.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="/Git/public/img/sieunhanxanhla.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-						</tbody>
+    <?php if (isset($data['orders']) && !empty($data['orders'])): ?>
+        <?php foreach ($data['orders'] as $order): ?>
+            <tr>
+                <td>
+                    <img src="/Git/public/img/customer.png" alt="User Image">
+                    <p><?php echo htmlspecialchars($order['name']); ?></p>
+                </td>
+                <td><?php echo htmlspecialchars($order['date_order']); ?></td>
+                <td>
+                    <span class="status 
+                        <?php 
+                            echo $order['status'] === 'Completed' ? 'completed' : 
+                                 ($order['status'] === 'Pending' ? 'pending' : 'process'); 
+                        ?>">
+                        <?php echo htmlspecialchars($order['status']); ?>
+                    </span>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="3">No recent orders found.</td>
+        </tr>
+    <?php endif; ?>
+</tbody>
+						
+								
+								
 					</table>
 				</div>
-				<div class="todo">
+				<!-- <div class="todo">
 					<div class="head">
 						<h3>Todos</h3>
 						
@@ -140,7 +127,7 @@
 							
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</main>
 		<!-- MAIN -->

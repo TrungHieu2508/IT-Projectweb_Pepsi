@@ -1,47 +1,84 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 
-h2 {
+#account {
+    display: flex;
+    height: 100vh;
+}
+
+#account > div {
+    flex: 1;
+}
+
+#account-Logo {
     text-align: center;
-    color: #000000;
+    margin-top:90px; 
+    margin-right: 200px;
 }
 
 .account-container {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    
 }
 
 .account-info {
-    margin-bottom: 15px;
+    text-align: left; /* Căn nội dung sang trái */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    padding: 10px;
+    padding-top: 30px; 
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.account-info h2{
+    font-weight: 900;
+}
+
+.account-info p{
+    padding: 10px; 
+}
+
+.account-info p strong {
+    font-weight: 900; /* In đậm nhãn (Name: và Email:) */
 }
 
 .account-info p {
-    margin: 5px 0;
-    color: #333;
+    font-weight: 400; /* Giữ nội dung (user name và email) không in đậm */
 }
 
-.btn-primary {
-    display: block;
+#account-img img {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #0025ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    width: 130px;
+    text-align: center;
+    border: 2px solid #0025ff;
+    transition: background-color 0.3s;
+    margin-right: 220px;
+    font-weight: 900;
+
+}
+
+.btn:hover {
+    background-color: #0626dbfd;
 }

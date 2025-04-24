@@ -1,14 +1,6 @@
 <?php
 class ProductModel extends DB {
-    public function execute($sql, $params = []) {
-        $stmt = $this->conn->prepare($sql);
-        if ($params) {
-            $stmt->bind_param(...$params);
-        }
-        $stmt->execute();
-        $this->result = $stmt->get_result();
-        return $this->result;
-    }
+
 
     public function getAllProducts() {
         $sql = "SELECT * FROM products";
@@ -73,6 +65,12 @@ class ProductModel extends DB {
         $result = $this->execute($sql);
         $row = $result->fetch_assoc();
         return $row ? $row['id'] : null;
+    }
+    public function countProducts() {
+        $sql = "SELECT COUNT(*) AS total FROM products"; // Đếm tất cả sản phẩm
+        $result = $this->execute($sql);
+        $row = $result->fetch_assoc();
+        return $row['total'];
     }
   
     

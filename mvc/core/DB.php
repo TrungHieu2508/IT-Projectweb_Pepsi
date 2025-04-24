@@ -17,5 +17,15 @@ class DB
         }
         mysqli_query($this->conn, "SET NAMES 'utf8'");
     }
+    public function execute($sql, $params = [])
+    {
+        $stmt = $this->conn->prepare($sql);
+        if ($params) {
+            $stmt->bind_param(...$params);
+        }
+        $stmt->execute();
+        $this->result = $stmt->get_result();
+        return $this->result;
+    }
 }
 ?>

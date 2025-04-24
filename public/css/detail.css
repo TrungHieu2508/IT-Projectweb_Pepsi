@@ -15,26 +15,32 @@
 .product-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
+    justify-content: space-around;
+    font-size: 10px;
 }
 .product-info img {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
     max-width: 200px;
-    border-radius: 10px;
     margin-right: 30px;
 }
 .product-info table {
     width: 50%;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
     border-collapse: collapse;
 }
 .product-info th,
 .product-info td {
     padding: 10px;
     text-align: left;
+    
 }
 .product-info th {
     background-color: #000000;
+    font-weight: 900;
 }
 .product-info td {
     background-color: #000000;
@@ -43,27 +49,42 @@
     color: #fff;
 }
 .btn {
-    background-color: #2479c3;
+    background-color: #0025ff;
     color: white;
+    font-size:14px; 
+    font-weight: 900;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 1px solid #0025ff;
     text-decoration: none;
     margin-top: 30px;
     display: inline-block;
 }
 .btn:hover {
-    background-color: #21527c;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: #0c22a1;
 }
 
-.btn-secondary {
-    background-color: #6c757d;
+.btn-secondary2 {
+    margin-bottom: 20px;
+    background-color: green;
+    border:1px solid green;
+
+}
+
+.btn-secondary2:hover{
+    background-color: rgb(7, 66, 7);
+}
+.btn-secondary{
+    background-color: grey;
+    border:1px solid grey;  
+}
+
+.btn-secondary:hover{
+    background-color: rgb(66, 66, 66);
+}
+.btn-primary{
+    margin-top: 30px;
+    margin-left: 85px; 
+    border-radius: 50px;
+
 }

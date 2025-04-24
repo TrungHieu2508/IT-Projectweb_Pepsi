@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="/Git/public/css/my_account.css">
 </head>
 <body>
-    <h2>My Account</h2>
-    <div class="account-container">
-        <div class="account-info">
-            <p><strong>Name:</strong> <?php echo $_SESSION['user']['name']; ?></p>
-            <p><strong>Email:</strong> <?php echo $_SESSION['user']['email']; ?></p>
+    <div id="account">
+        <div>
+            <div id="account-Logo">
+                <img src="/Git/public/img/logoweb.png" alt="logo">
+            </div>
+            <div class="account-container">
+                <div class="account-info">
+                    <h2>PROFILE INFORMATION</h2>
+                    <p><strong>Name:</strong> <?php echo $_SESSION['user']['name']; ?></p>
+                    <p><strong>Email:</strong> <?php echo $_SESSION['user']['email']; ?></p>
+                </div>
+                <a href="/Git/Logout" class="btn btn-primary">Logout</a>
+            </div>
         </div>
-        <a href="/Git/Logout" class="btn btn-primary">Logout</a>
+        <div id="account-img">
+            <img src="/Git/public/img/img_myaccount.jpg" alt="background">
+        </div>
     </div>
+   
+    
 </body>
 </html>
