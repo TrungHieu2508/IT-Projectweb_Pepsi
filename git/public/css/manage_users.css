@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container for the manage users section */
+.manage-users-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* User list section */
+h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+/* Table styling */
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header */
+.user-list th {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+/* Table body */
+.user-list td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for table rows */
+.user-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Actions column styling */
+.user-list a {
+    padding: 8px 15px;
+    margin-right: 10px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.user-list a:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+/* Styling for empty state message */
+.user-list p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .manage-users-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .user-list table {
+        font-size: 1rem;
+    }
+
+    .user-list td,
+    .user-list th {
+        padding: 10px;
+    }
+
+    .user-list a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
