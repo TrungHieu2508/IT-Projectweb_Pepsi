@@ -3,7 +3,7 @@ class Logout extends Controller
 {
     public function show()
     {
-        // Hủy bỏ session
+        
         session_start();
         session_unset();
         session_destroy();

@@ -35,7 +35,7 @@
                     <h1><?php echo htmlspecialchars($product['name']); ?></h1>
                     <h2>Nutrition Facts</h2>
                     <hr>
-                    <p>Serving Size <?php echo htmlspecialchars($product['size']); ?></p>
+                    <p>Serving Size <?php echo htmlspecialchars($product['size']); ?> fl oz</p>
                     <p>Servings Per Container 1</p>
                     <p>Amount Per Serving </p>
                     <table>

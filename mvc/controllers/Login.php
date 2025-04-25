@@ -8,6 +8,17 @@ class Login extends Controller
     }
     public function Show()
     {
+        //Kiểm tra nếu người dùng đã đăng nhập
+        if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
+            if ($_SESSION['user']['role'] == 1) {
+                
+                header("Location: /Git/Admin/Show");
+            } else {
+               
+                header("Location: /Git/Home");
+            }
+            exit();
+        }
         $this->view("master1", [
             "page" => "login"
         ]);
@@ -24,7 +35,7 @@ class Login extends Controller
                 $_SESSION['user'] = $user;
                 $_SESSION['user_logged_in'] = true;
 
-                // Kiểm tra vai trò và chuyển hướng
+                
                 if ($user['role'] == 1) {
                     header("Location:/Git/Admin/Show");
                 } else {
@@ -32,9 +43,9 @@ class Login extends Controller
                 }
                 exit();
             } else {
-                  // Lưu thông báo lỗi vào session
+                  
             $_SESSION['error'] = "Invalid email or password.";
-            header("Location: /Git/Login"); // Chuyển hướng về trang login
+            header("Location: /Git/Login"); 
             exit();
               
             }
