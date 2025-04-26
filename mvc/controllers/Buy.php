@@ -9,7 +9,7 @@ class Buy extends Controller {
 
     public function Show() {
         
-        $products = $this->productModel->getAllProducts();
+        $products = $this->productModel->getProducts();
 
         
         $this->view("master3", [

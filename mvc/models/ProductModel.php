@@ -15,10 +15,8 @@ class ProductModel extends DB {
 
     //     return $products;
     // }
-    public function getAllProducts() {
-        $sql = "SELECT id, name, img,size,calories,total_fat,value_fat
-        ,sodium,value_sodium,total_carbohydrates,value_Carbohydrate,
-        sugars,protein,components
+    public function getProducts() {
+        $sql = "SELECT id, name, img
         FROM products ";
         $result = $this->execute($sql);
         $products = [];

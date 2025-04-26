@@ -40,16 +40,23 @@ class Admin extends Controller {
    
 
 
-
+//*********Manage Product***********/
     public function ManageProducts() {
         $this->checkAdmin();
-        $products = $this->ProductModel->getAllProducts();
+        $products = $this->ProductModel->getProducts();
         $this->view("master2", [
             "admin" => "manage_product",
             "products" => $products
         ]);
     }
+    
+    
 
+    
+  
+   
+
+    //*********Manage Product***********/
     public function ManageOrders() {
         $this->checkAdmin();
         $orders = $this->OrderModel->getOrders();
@@ -58,6 +65,12 @@ class Admin extends Controller {
             "orders" => $orders
         ]);
     }
+    
+  
+    
+    
+
+    //*********Manage Contact***********/
     public function ManageContact() {
         $this->checkAdmin();
         $contact = $this->ContactModel->getContacts();
@@ -67,6 +80,10 @@ class Admin extends Controller {
         ]);
    
     }
+    
+
+
+    //*********Manage User***********/
     public function ManageUsers() {
         $this->checkAdmin();
         $user = $this->UserModel->getUsers();

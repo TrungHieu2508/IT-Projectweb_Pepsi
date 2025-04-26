@@ -7,7 +7,7 @@ class Product extends Controller {
     }
 
     public function Show(){
-        $products = $this->ProductModel->getAllProducts();
+        $products = $this->ProductModel->getProducts();
 
         $this->view("master1", [ 
             "page" => "product",

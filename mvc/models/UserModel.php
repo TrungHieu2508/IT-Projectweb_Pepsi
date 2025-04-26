@@ -34,11 +34,11 @@ class UserModel extends DB
         $user = $result->fetch_assoc();
         return $user;
     }
-    public function getUserById($id) {
-        $sql = "SELECT * FROM user WHERE id = ?";
-        $result = $this->execute($sql, ["i", $id]);
-        return $result->fetch_assoc();
-    }
+    // public function getUserById($id) {
+    //     $sql = "SELECT * FROM user WHERE id = ?";
+    //     $result = $this->execute($sql, ["i", $id]);
+    //     return $result->fetch_assoc();
+    // }
     public function deleteUser($id) {
         $sql = "DELETE FROM user WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
