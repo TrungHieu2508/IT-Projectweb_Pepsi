@@ -36,7 +36,7 @@
 			</li>
             <li>
 				<a href="/Git/Admin/ManageOrders">
-					<img src="/Git/public/img/order.png" alt="Oder" style="height: 30px;">
+					<img src="/Git/public/img/neworder.png" alt="Oder" style="height: 30px;">
 					<span class="text"> Oder</span>
 				</a>
 			</li>
@@ -44,12 +44,12 @@
 			
 		</ul>
 		<ul class="side-menu">
-			<li>
+			<!-- <li>
 				<a href="#">
 					<img src="/Git/public/img/settings.png" alt="Settings" style="width: 40px;">
 					<span class="text">Settings</span>
 				</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="/Git/Logout" class="logout">
 					<img src="/Git/public/img/logout.png" alt="Logout" style="width: 40px;" >
@@ -68,7 +68,7 @@
 		<nav>
 			<div class="menu"><img src="/Git/public/img/menuadmin.png" alt="menu" style="width: 20px;"></div>
 			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
+			<!-- <form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><img src="/Git/public/img/adminsearch.png" alt="search" style="width: 20px;"></button>
@@ -78,9 +78,11 @@
 			<a href="#" class="notification">
 				<div><img src="/Git/public/img/notification.png" alt="notification" style="width: 20px;"></div>
 				<span class="num">8</span>
-			</a>
+			</a> -->
 			<a href="#" class="profile">
-				<img src="/Git/public/img/people.png">
+				<img src="/Git/public/img/customer.png">
+				<span><?php echo isset($_SESSION['user']['name']) ? htmlspecialchars($_SESSION['user']['name']) : 'Admin'; ?></span>
+
 			</a>
 		</nav>
 		<!-- NAVBAR -->

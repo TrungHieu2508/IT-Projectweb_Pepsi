@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/orderpepsi2.css">
+    <title>Order</title>
+</head>
+<body>
+    <script src="../assets/js/order.js"></script>
+    <div class="app">
+        <div class="app__header">
+            <nav class="header__navbar">
+                <ul class="navbar__content">
+                    <li><a href="../Public/index.html">Home</a></li>
+                    <li><a href="../Public/recipes.html">Recipes</a></li>
+                    <li><a href="../Public/view_product/pepsi.html">View Products</a></li>
+                    <li><a href="../Public/LocalEat.html">Local Eats Deserve Pepsi</a></li>
+                    <li><a href="../Public/Order.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="app__container">
+            <div class="container__logo--header">
+                <a href="./index.html"><img src="../assets/img/logoweb.png" alt="logo"></a>
+            </div>
+            <div class="container__backgroundPepsi">
+                <img src="assets/img/4575b8f5880b7a6d51e4db5980e12642.gif" alt="pepsi loaction">
+            </div>
+            <div class="container__pepsiText"><p>Order now</p></div>
+            <a href="#"><button class="container__pepsiBtn">New offers and gifts</button></a>
+            <div class="container__form-product">
+                <form class="form" id="orderForm" action="#" method="post">
+                    <h2 class="form__title">Order Your Pepsi</h2>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="fullname">Name</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" name="phone-number" id="phone-number" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Enter your address" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="product-quantity">Quantity</label>
+                            <input type="number" name="product-quantity" id="product-quantity" placeholder="Enter quantity" min="1" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Information Product</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Enter information product" required></textarea>
+                        </div>
+                        <div class="form__group">
+                            <button type="submit" class="form__btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <footer class="app__footer">
+            <div class="footer__FAQ" style="border: 1px solid black; background-color: #e9e9e9; color:black; padding-top: 20px;padding-bottom: 20px; position: relative; bottom: 40px;">
+                <p style="font-size: 1.7rem; text-align: center;">Not looking for anything specific? Browse our <span style="color: #0025ff; font-weight:700; cursor: pointer;">FAQs</span></p>
+            </div>
+            <div class="footer__content">
+                <div class="content__email">
+                    <div class="content__email__horizontal">
+                        <div class="email__icon"><img src="../assets/img/email.png" alt="email icon"></div>
+                        <div class="email__text">Email us</div>
+                    </div>
+                    <button class="email__btn">Email Now</button>
+                </div>
+                <div class="content__phone">
+                    <div class="content__phone__horizontal">
+                        <div class="phone__icon"><img src="../assets/img/phone-call.png" alt="phone icon"></div>
+                        <div class="phone__text">Talk with us</div>
+                    </div>
+                    <button class="phone__btn">1-800-433-2652</button>
+                </div>
+                <div class="content__socialIcon">
+                    <div class="content__socialIcon__horizontal">
+                        <div class="social__icon"><img src="../assets/img/share.png" alt="connected icon"></div>
+                        <div class="social__text">Connect with us</div>
+                    </div>
+                    <ul class="social__icon">
+                        <li class="social__icon--facebook"><a href="https://www.facebook.com/Pepsivietnam"><img src="../assets/img/face-book.png" alt="facebook icon" style="height: 30px; margin-left:2rem; margin-top:2rem ; "></a></li>
+                        <li class="social__icon--insta"><a href="https://www.instagram.com/pepsi/"><img src="../assets/img/ins.png" alt="instagram icon" style="height: 30px;margin-left:2rem;margin-top:2rem ; ;"></a></li>
+                        <li class="social__icon--twitter"><a href="https://x.com/pepsi"><img src="../assets/img/twitter-sign.png" alt="twitter icon" style="height: 30px;margin-left:2rem;;margin-top:2rem ;  "></a></li>
+                        <li class="social__icon--tiktok"><a href="https://www.tiktok.com/@pepsi"><img src="../assets/img/tik-tok.png" alt="tiktok icon" style="height: 30px; margin-left:2rem; margin-top:2rem ; "></a></li>
+                        <li class="social__icon--threads"><a href="https://www.threads.net/@pepsi"><img src="../assets/img/threads.png" alt="threads icon" style="height: 30px; margin-left:2rem;; margin-top:2rem ; "></a></li>
+                        <li class="social__icon--youtube"><a href="https://www.youtube.com/user/Pepsi"><img src="../assets/img/youtube.png" alt="youtube icon" style="height: 40px;margin-left:2rem; margin-top: 2.4rem; "></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+                <p style="font-size: 14px; text-align: center; position: relative; bottom: 60px;">M-F 9:00am - 5:00pm ET</p>
+                <div class="footer__line"></div>
+                <div class="footer__about">
+                    <ul class="footer__about__list">
+                        <li><a href="https://contact.pepsico.com/pepsi/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://contact.pepsico.com/pepsi/terms-conditions">Terms of Use</a></li>
+                        <li><a href="https://contact.pepsico.com/pepsi/about-our-ads">About Our Ads</a></li>
+                        <li><a href="https://contact.pepsico.com/pepsi/accessibility-statement">Website Accessibility Statement</a></li>
+                        <li><a href="https://hackerone.com/pepsico_vdp?type=team">Responsible Disclosure</a></li>
+                        <li><a href="https://contact.pepsico.com/pepsi/about-us">About Us</a></li>
+                        <li><a href="https://contact.pepsico.com/pepsi/site-map">Site map</a></li>
+                    </ul>
+                </div>
+                <p style="font-size: 1.3rem; margin-left: 660px;margin-top: 14px; padding-bottom: 30px;">©2023 PepsiCo, Inc. All Rights Reserved</p>
+        </footer> 
+    </div>    
+</body>
+</html>

@@ -30,9 +30,7 @@
                     </div>
                     <button type="submit" name="btnLogin" class="btn btn-primary" style="margin-left: 100px;">Login</button>
                 </form>
-                    <div class="forgot-password"  >
-                        Forget your password? <a href="#">Click here to reset.</a>
-                    </div>
+                   
                     <div class="forgot-password" style="padding-bottom: 10px">
                         Not yet registered?
                     </div>

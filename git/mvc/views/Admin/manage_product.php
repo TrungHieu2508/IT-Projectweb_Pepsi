@@ -11,6 +11,7 @@
         <h3>Manage Products</h3>
         <p>Product List</p>
     </div>
+    
 
     <div id="table__product">
         <table>
@@ -34,11 +35,14 @@
                             ?>
                             <td><img src="data:image/jpeg;base64,<?php echo $imageData;?>" alt="Product Image"></td>
                             <td><?php echo htmlspecialchars($products['name']); ?></td>
-                            <td>
-                                <a href="/Git/Admin/<?php echo $products['id']; ?>">Edit</a>
-                                <a href="/Git/Admin/<?php echo $products['id']; ?>">Delete</a>
-
-                        </tr>
+                            <td class="action__btn">
+                                <form action="/Git/Admin//<?php echo $products['id']; ?>" method="POST" style="display:inline;">
+                                    <button type="submit" name="action" value="edit" class="edit__btn">Edit</button>
+                                </form>
+                                <form action="/Git/Admin/<?php echo $products['id']; ?>" method="POST" style="display:inline;">
+                                    <button type="submit" name="action" value="delete" class="delete__btn" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
+                                </form>
+                            </td>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <tr>

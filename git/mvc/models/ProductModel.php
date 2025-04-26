@@ -1,30 +1,23 @@
 <?php
 class ProductModel extends DB {
-    public function execute($sql, $params = []) {
-        $stmt = $this->conn->prepare($sql);
-        if ($params) {
-            $stmt->bind_param(...$params);
-        }
-        $stmt->execute();
-        $this->result = $stmt->get_result();
-        return $this->result;
-    }
 
-    public function getAllProducts() {
-        $sql = "SELECT * FROM products";
-        $result = $this->execute($sql);
-        $products = [];
 
-        if ($result) {
-            while ($row = $result->fetch_assoc()) {
-                $products[] = $row;
-            }
-        }
+    // public function getAllProducts() {
+    //     $sql = "SELECT * FROM products";
+    //     $result = $this->execute($sql);
+    //     $products = [];
 
-        return $products;
-    }
+    //     if ($result) {
+    //         while ($row = $result->fetch_assoc()) {
+    //             $products[] = $row;
+    //         }
+    //     }
+
+    //     return $products;
+    // }
     public function getProducts() {
-        $sql = "SELECT id, name, image FROM products WHERE hidden = 0"; // Lấy sản phẩm không bị ẩn
+        $sql = "SELECT id, name, img
+        FROM products ";
         $result = $this->execute($sql);
         $products = [];
     
@@ -74,6 +67,13 @@ class ProductModel extends DB {
         $row = $result->fetch_assoc();
         return $row ? $row['id'] : null;
     }
+    public function countProducts() {
+        $sql = "SELECT COUNT(*) AS total FROM products"; 
+        $result = $this->execute($sql);
+        $row = $result->fetch_assoc();
+        return $row['total'];
+    }
+    
   
     
 }

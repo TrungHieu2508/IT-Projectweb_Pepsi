@@ -553,18 +553,17 @@ ul{
     padding-top: 100px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px; /* Giảm margin-left để tận dụng không gian */
-    margin-right: 30px;
-    width: calc(100% - 60px); /* Tính toán chiều rộng phù hợp */
+    margin-left: 200px; 
+    margin-right: 100px; 
 }
 .showProduct__item {
     display: flex;
     flex-direction: column;
     width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
-    max-width: 250px; /* Giới hạn chiều rộng tối đa */
+    max-width: 200px; /* Giới hạn chiều rộng tối đa */
     height: 230px;
     align-items: center;
-    justify-content: space-between; /* Phân bố không gian đều */
+    justify-content: space-between; 
     padding: 15px;
     box-sizing: border-box;
     background-color: white;

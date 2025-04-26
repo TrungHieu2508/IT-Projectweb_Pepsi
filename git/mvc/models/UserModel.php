@@ -1,19 +1,10 @@
 <?php
 class UserModel extends DB
 {
-    public function execute($sql, $params = [])
-    {
-        $stmt = $this->conn->prepare($sql);
-        if ($params) {
-            $stmt->bind_param(...$params);
-        }
-        $stmt->execute();
-        $this->result = $stmt->get_result();
-        return $this->result;
-    }
+    
     
     public function getUsers() {
-    $sql = "SELECT id,name, email FROM user WHERE hidden = 0"; 
+    $sql = "SELECT id,name, email FROM user "; 
     $result = $this->execute($sql);
     $user = [];
 
@@ -43,11 +34,11 @@ class UserModel extends DB
         $user = $result->fetch_assoc();
         return $user;
     }
-    public function getUserById($id) {
-        $sql = "SELECT * FROM user WHERE id = ?";
-        $result = $this->execute($sql, ["i", $id]);
-        return $result->fetch_assoc();
-    }
+    // public function getUserById($id) {
+    //     $sql = "SELECT * FROM user WHERE id = ?";
+    //     $result = $this->execute($sql, ["i", $id]);
+    //     return $result->fetch_assoc();
+    // }
     public function deleteUser($id) {
         $sql = "DELETE FROM user WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
@@ -55,6 +46,12 @@ class UserModel extends DB
         $result = $stmt->execute();
         $stmt->close();
         return $result; 
+    }
+    public function countUsers() {
+        $sql = "SELECT COUNT(*) AS total FROM user"; 
+        $result = $this->execute($sql);
+        $row = $result->fetch_assoc();
+        return $row['total'];
     }
 
 }

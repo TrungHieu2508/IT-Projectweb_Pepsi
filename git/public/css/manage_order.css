@@ -47,34 +47,6 @@ tr:hover {
     background-color: white;
 }
 
-.action__btn {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 20px;
-    border-top: 0px solid #ccc;
-    border-left: 0px solid #ccc;
-    border-right: 0px solid #ccc;
-}
 
-.action__btn button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.edit__btn {
-    background-color: #3498db;
-    color: white;
-}
-
-.delete__btn {
-    background-color: #3498db;
-    color: white;
-    margin-left: 5px;
-}
 
 /* MAIN */
