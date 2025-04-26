@@ -34,12 +34,21 @@
                         <span style="color:#0025ff;text-decoration: underline; cursor:pointer">Pepsi</span></p></div>
                      <!-- layout cart -->
                      <div class="product__header__findProduct">
+                        <div class="product__header__history">
+                            <?php if (isset($_SESSION['user'])): ?>
+                            <!-- Nếu đã đăng nhập -->
+                            <a href="#"><button>Order History</button></a>
+                            <?php else: ?>
+                            <!-- Nếu chưa đăng nhập -->
+                            <a href="/Git/Login"><button>Order History</button></a>
+                            <?php endif; ?>
+                        </div>
                         <div class="product__header__shopping">
                             <img src="/Git/public/img/shopping-cart.png" alt="shopping cart">
                             <span class="product__header__shopping--notice">0</span>
 
-               <!-- no card: shopping__cart--list--no-cart -->
-               <div class="shopping__cart--list shopping__cart--list--no-cart">
+                            <!-- no card: shopping__cart--list--no-cart -->
+                            <div class="shopping__cart--list shopping__cart--list--no-cart">
                                 <h4 class="shopping__cart--heading">Selected Products</h4>
                                 <div class="shopping__cart--list--no--cart--img">
                                     <img src="/Git/public/img/cartoon-word-png-sticker-transparent-background_53876-993545.jpg" alt="shopping cart">
@@ -51,14 +60,14 @@
                             </div>
                         </div>
                         <div class="product__header__findBtn">
-                    <?php if (isset($_SESSION['user'])): ?>
-                     <!-- Nếu đã đăng nhập -->
-                     <a href="/Git/Contact"><button>Order</button></a>
-                    <?php else: ?>
-                     <!-- Nếu chưa đăng nhập -->
-                     <a href="/Git/Login"><button>Order</button></a>
-                 <?php endif; ?>
-                    </div>
+                            <?php if (isset($_SESSION['user'])): ?>
+                            <!-- Nếu đã đăng nhập -->
+                            <a href="/Git/Contact"><button>Order</button></a>
+                            <?php else: ?>
+                            <!-- Nếu chưa đăng nhập -->
+                            <a href="/Git/Login"><button>Order</button></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
                 <div class="product__search">
