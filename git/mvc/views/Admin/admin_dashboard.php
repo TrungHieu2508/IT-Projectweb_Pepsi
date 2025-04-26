@@ -79,13 +79,16 @@
                 </td>
                 <td><?php echo htmlspecialchars($order['date_order']); ?></td>
                 <td>
-                    <span class="status 
-                        <?php 
-                            echo $order['status'] === 'Completed' ? 'completed' : 
-                                 ($order['status'] === 'Pending' ? 'pending' : 'process'); 
-                        ?>">
-                        <?php echo htmlspecialchars($order['status']); ?>
-                    </span>
+				<span class="status 
+        <?php 
+            echo $order['status'] === 'completed' ? 'completed' : 
+                 ($order['status'] === 'pending' ? 'pending' : 'processing'); 
+        ?>">
+        <?php 
+            echo $order['status'] === 'completed' ? 'Đã xử lý' : 
+                 ($order['status'] === 'pending' ? 'Chưa xử lý' : 'Đang xử lý'); 
+        ?>
+    </span>
                 </td>
             </tr>
         <?php endforeach; ?>

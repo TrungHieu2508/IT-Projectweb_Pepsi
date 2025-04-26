@@ -37,10 +37,10 @@
                         <div class="product__header__history">
                             <?php if (isset($_SESSION['user'])): ?>
                             <!-- Nếu đã đăng nhập -->
-                            <a href="#"><button>Order History</button></a>
+                            <a href="/Git/History"><button>Order History</button></a>
                             <?php else: ?>
                             <!-- Nếu chưa đăng nhập -->
-                            <a href="/Git/Login"><button>Order History</button></a>
+                            <a href="/Git/Login"><button>Order</button></a>
                             <?php endif; ?>
                         </div>
                         <div class="product__header__shopping">
@@ -62,7 +62,7 @@
                         <div class="product__header__findBtn">
                             <?php if (isset($_SESSION['user'])): ?>
                             <!-- Nếu đã đăng nhập -->
-                            <a href="/Git/Contact"><button>Order</button></a>
+                            <a href="/Git/Order"><button>Order</button></a>
                             <?php else: ?>
                             <!-- Nếu chưa đăng nhập -->
                             <a href="/Git/Login"><button>Order</button></a>
@@ -101,17 +101,9 @@
         <?php else: ?>
             <p>No products available.</p>
         <?php endif; ?>
-          
     </div>
 </div
-<div class="product__nextPage">
-        <div class="nextPage__text">
-            <!-- <p>Viewing Products 1 - 12 of 24</p> -->
-        </div>
-        <div class="nextPage__Btn">
-            <a href="/Git/Home"><button>home</button></a>
-        </div>
-    </div>
+<div class="product__end"></div>
 
     <script src="/Git/public/js/buy.js"></script>
 

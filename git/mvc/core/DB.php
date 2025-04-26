@@ -27,5 +27,6 @@ class DB
         $this->result = $stmt->get_result();
         return $this->result;
     }
+    
 }
 ?>
