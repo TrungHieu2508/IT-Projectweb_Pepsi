@@ -65,6 +65,23 @@ class Admin extends Controller {
             "orders" => $orders
         ]);
     }
+    public function UpdateStatus() {
+        $this->checkAdmin();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $order_id = $_POST['order_id'];
+            $status = $_POST['status'];
+    
+            // Gọi model để cập nhật trạng thái
+            $result = $this->model("OrderModel")->updateOrderStatus($order_id, $status);
+    
+            if ($result) {
+                header("Location: /Git/Admin/ManageOrders"); // Chuyển hướng về trang quản lý đơn hàng
+                exit();
+            } else {
+                echo "Failed to update status.";
+            }
+        }
+    }
     
   
     

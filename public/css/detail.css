@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
@@ -14,6 +15,9 @@ body {
     height: 100vh;
     padding: 20px;
     text-align: center; 
+    width: 100%;
+    max-width: 2500px;
+    margin-top: 50px;
 }
 
 .product-info {
@@ -33,7 +37,6 @@ body {
     max-width: 300px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .product-details {
@@ -42,12 +45,13 @@ body {
 }
 
 .product-details h1 {
-    font-size: 3rem;
+    font-size: 25px;
     margin-bottom: 10px;
+    font-weight: 900;
 }
 
 .product-details h2 {
-    font-size: 2rem;
+    font-size: 15px;
     margin-bottom: 20px;
     text-transform: uppercase;
     border-bottom: 2px solid white;
@@ -83,9 +87,11 @@ body {
     color: white;
     background-color: #0025ff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-right: 10px;
     transition: background-color 0.3s ease;
+    border: 1px solid #0025ff;
+    
 }
 
 .btn:hover {
