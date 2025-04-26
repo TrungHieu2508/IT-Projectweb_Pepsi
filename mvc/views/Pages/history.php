@@ -33,9 +33,9 @@
                                 <th>Address</th>
                                 <th>Amount</th>
                                 <th>Product</th>
-                                <th>Status</th>
+
                                 <th>Order date</th>
-                                
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
