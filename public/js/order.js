@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cartItemsList.appendChild(listItem);
             productNames.push(item.name); // Lưu tên sản phẩm vào mảng
         });
+        
 
         // Gán danh sách sản phẩm vào trường ẩn
         productInput.value = productNames.join(', ');
@@ -24,4 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cartItemsList.innerHTML = '<p>Your cart is empty.</p>';
         productQuantityInput.value = 0; // Nếu giỏ hàng trống, đặt số lượng là 0
     }
+    
+    
 });

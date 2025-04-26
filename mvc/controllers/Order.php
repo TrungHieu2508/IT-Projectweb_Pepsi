@@ -34,17 +34,19 @@ class Order extends Controller {
         $orderModel = $this->model("OrderModel");
         $result = $orderModel->insertOrder($user_id, $name, $phone_number, $address, $amount, $product, $date_order);
 
-        if ($result) {
-            $this->view("master3", [
-                "page" => "order",
-                "message" => "Order inserted successfully!"
-            ]);
-        } else {
-            $this->view("master3", [
-                "page" => "order",
-                "message" => "Failed to insert order."
-            ]);
-        }
+         // Hiển thị thông báo bằng alert
+         if ($result) {
+          echo "<script>
+              alert('Order inserted successfully!');
+              
+              window.location.href = '/Git/Buy'; // Chuyển hướng về trang order
+          </script>";
+      } else {
+          echo "<script>
+              alert('Failed to insert order.');
+              window.location.href = '/Git/Buy'; // Chuyển hướng về trang order
+          </script>";
+      }
     }
   }
 }

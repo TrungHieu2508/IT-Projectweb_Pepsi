@@ -40,8 +40,9 @@
                         </thead>
                         <tbody>
                         <?php if (isset($data['orders']) && !empty($data['orders'])): ?>
-        <?php foreach ($data['orders'] as $order): ?>
-            <?php $i = 1; ?>
+              <?php $i = 1; ?>              
+            <?php foreach ($data['orders'] as $order): ?>
+            
             <tr>
                 <td><?php echo $i++; ?></td>
                 <td><?php echo htmlspecialchars($order['name']); ?></td>
