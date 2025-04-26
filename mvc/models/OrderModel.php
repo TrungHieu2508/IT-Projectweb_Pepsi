@@ -15,13 +15,13 @@ class OrderModel extends DB{
     
         return $orders;
     }
-    public function insertOrder($name, $phone_number, $address, $amount, $product, $date_order) {
-        $sql = "INSERT INTO orders (name, phone_number, address, amount, product, date_order) 
-                VALUES (?, ?, ?, ?, ?, ?)";
+    public function insertOrder($user_id,$name, $phone_number, $address, $amount, $product, $date_order) {
+        $sql = "INSERT INTO orders (user_id,name, phone_number, address, amount, product, date_order) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
         
         // Sử dụng Prepared Statement để tránh SQL Injection
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ssssss", $name, $phone_number, $address, $amount, $product, $date_order);
+        $stmt->bind_param("issssss", $user_id, $name, $phone_number, $address, $amount, $product, $date_order);
         
         if ($stmt->execute()) {
             return true; // Trả về true nếu thêm thành công
@@ -46,6 +46,20 @@ class OrderModel extends DB{
         $result = $this->execute($sql);
         $row = $result->fetch_assoc();
         return $row['total']; // Trả về tổng số đơn hàng
+    }
+    public function getOrdersByUserId($user_id) {
+        $sql = "SELECT * FROM orders WHERE user_id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        $orders = [];
+        while ($row = $result->fetch_assoc()) {
+            $orders[] = $row;
+        }
+    
+        return $orders;
     }
 }
 ?>

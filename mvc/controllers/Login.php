@@ -34,6 +34,8 @@ class Login extends Controller
               if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user'] = $user;
                 $_SESSION['user_logged_in'] = true;
+                $_SESSION['user_id'] = $user['id']; // Lưu user_id vào session
+
 
                 
                 if ($user['role'] == 1) {
