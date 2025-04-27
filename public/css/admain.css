@@ -271,12 +271,20 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+.profile {
+	display: flex;
+	align-items: center;
+	grid-gap: 5px;
+	margin-left: auto;
+}
+
 #content nav .profile img {
 	width: 36px;
 	height: 36px;
 	object-fit: cover;
 	border-radius: 50%;
 }
+
 
 /* NAVBAR */
 

@@ -61,6 +61,17 @@ class OrderModel extends DB{
     
         return $orders;
     }
+    public function deleteOrder($order_id) {
+        $sql = "DELETE FROM orders WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $order_id);
+    
+        if ($stmt->execute()) {
+            return true; 
+        } else {
+            return false; 
+        }
+    }
 }
 ?>
 

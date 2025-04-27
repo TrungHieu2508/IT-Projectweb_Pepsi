@@ -81,6 +81,23 @@ class Admin extends Controller {
                 echo "Failed to update status.";
             }
         }
+
+    }
+    public function Delete($order_id) {
+        $this->checkAdmin();
+        $result = $this->OrderModel->deleteOrder($order_id);
+
+        if ($result) {
+            echo "<script>
+                alert('Order deleted successfully!');
+                window.location.href = '/Git/Admin/ManageOrders';
+            </script>";
+        } else {
+            echo "<script>
+                alert('Failed to delete order.');
+                window.location.href = '/Git/Admin/ManageOrders';
+            </script>";
+        }
     }
     
   

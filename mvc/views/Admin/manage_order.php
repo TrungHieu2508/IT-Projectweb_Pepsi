@@ -49,6 +49,9 @@
                         <option value="completed" <?php echo $order['status'] == 'completed' ? 'selected' : ''; ?>>Đã xử lý</option>
                     </select>
                 </form>
+                <form action="/Git/Admin/Delete/<?php echo $order['id']; ?>" method="get" style="display: inline;">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this order?');">Delete</button>
+                </form>
             </td>
                     
                 </tr>
