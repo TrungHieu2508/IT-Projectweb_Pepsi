@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product</title>
-    <link rel="stylesheet" href="/Git/public/css/admin.css"> <!-- Đường dẫn tới file CSS -->
+    <link rel="stylesheet" href="/Git/public/css/edit_product.css"> <!-- Đường dẫn tới file CSS -->
 </head>
 <body>
     <div class="container">
@@ -64,9 +64,7 @@
 
             <!-- Components -->
             <label for="components">Components:</label>
-            <textarea name="components" id="components" rows="4"><?php echo htmlspecialchars($data['product']['components']); ?></textarea>
-
-            <!-- Submit Button -->
+            <textarea name="components" id="components" rows="4"><?php echo htmlspecialchars($data['product']['components']); ?></textarea>            <!-- Submit Button -->
             <button type="submit">Update Product</button>
         </form>
     </div>

@@ -80,21 +80,38 @@ class ProductModel extends DB {
         if ($img) {
             // Nếu có ảnh mới, cập nhật cả ảnh
             $sql = "UPDATE products 
-                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, value_carbohydrate = ?, components = ?, img = ? 
+                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, 
+                    value_carbohydrate = ?, components = ?, img = ?
                     WHERE id = ?";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param("sdiidiiiiiibsi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img, $id);
+            $stmt->bind_param(
+                "sdiiiiiiiisssi",
+                $name, $size, $calories,
+                 $total_fat, $sodium, $total_carbohydrates,
+                $sugars, $protein, $value_fat,
+                 $value_sodium, $value_carbohydrate,
+                $components, $img,$id
+            );
         } else {
             // Nếu không có ảnh mới, chỉ cập nhật các trường khác
             $sql = "UPDATE products 
-                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, value_carbohydrate = ?, components = ? 
+                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, value_carbohydrate = ?, components = ?
                     WHERE id = ?";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param("sdiidiiiiiibs", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $id);
+            $stmt->bind_param(
+                "sdiiiiiiiiisi",
+                $name, $size, $calories,
+                 $total_fat, $sodium, $total_carbohydrates,
+                $sugars, $protein, $value_fat, $value_sodium,
+                 $value_carbohydrate,
+                $components, $id
+            );
+            
         }
     
         return $stmt->execute();
     }
+    
 public function deleteProduct($id) {
     $sql = "DELETE FROM products WHERE id = ?";
     $stmt = $this->conn->prepare($sql);
@@ -112,14 +129,26 @@ public function insertProduct($name, $size, $calories, $total_fat, $sodium, $tot
         $sql = "INSERT INTO products (name, size, calories, total_fat, sodium, total_carbohydrates, sugars, protein, value_fat, value_sodium, value_carbohydrate, components, img) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sdiidiiiiiibs", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img);
-    } else {
+        $stmt->bind_param(
+            "sdiiiiiiiisss",
+            $name, $size, $calories,
+             $total_fat, $sodium, $total_carbohydrates,
+            $sugars, $protein, $value_fat,
+             $value_sodium, $value_carbohydrate,
+            $components, $img
+        );    } else {
         // Nếu không có ảnh, thêm các trường khác
         $sql = "INSERT INTO products (name, size, calories, total_fat, sodium, total_carbohydrates, sugars, protein, value_fat, value_sodium, value_carbohydrate, components) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sdiidiiiiiis", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components);
-    }
+        $stmt->bind_param(
+            "sdiiiiiiiiiss",
+            $name, $size, $calories,
+             $total_fat, $sodium, $total_carbohydrates,
+            $sugars, $protein, $value_fat, $value_sodium,
+             $value_carbohydrate,
+            $components
+        );    }
 
     return $stmt->execute();
 }

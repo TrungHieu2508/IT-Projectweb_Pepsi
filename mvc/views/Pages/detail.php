@@ -56,7 +56,7 @@
                         <tr>
                             <td>Total Carbohydrate</td>
                             <td><?php echo htmlspecialchars($product['total_carbohydrates']); ?>g</td>
-                            <td><?php echo htmlspecialchars($product['value_Carbohydrate']); ?>%</td>
+                            <td><?php echo htmlspecialchars($product['value_carbohydrate']); ?>%</td>
                         </tr>
                         <tr>
                             <td>Sugars</td>

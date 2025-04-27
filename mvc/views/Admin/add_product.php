@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
-    <link rel="stylesheet" href="/Git/public/css/admin.css"> <!-- Đường dẫn tới file CSS -->
+    <link rel="stylesheet" href="/Git/public/css/add_product.css"> <!-- Đường dẫn tới file CSS -->
 </head>
 <body>
     <div class="container">
