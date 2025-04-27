@@ -76,25 +76,25 @@ class ProductModel extends DB {
         $row = $result->fetch_assoc();
         return $row['total'];
     }
-public function updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img = null) {
-    if ($img) {
-        // Nếu có ảnh mới, cập nhật cả ảnh
-        $sql = "UPDATE products 
-                SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, components = ?, img = ? 
-                WHERE id = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sdiidiiibsi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img, $id);
-    } else {
-        // Nếu không có ảnh mới, chỉ cập nhật các trường khác
-        $sql = "UPDATE products 
-                SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, components = ? 
-                WHERE id = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("sdiidiiisi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $id);
+    public function updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img = null) {
+        if ($img) {
+            // Nếu có ảnh mới, cập nhật cả ảnh
+            $sql = "UPDATE products 
+                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, value_carbohydrate = ?, components = ?, img = ? 
+                    WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("sdiidiiiiiibsi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img, $id);
+        } else {
+            // Nếu không có ảnh mới, chỉ cập nhật các trường khác
+            $sql = "UPDATE products 
+                    SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, value_fat = ?, value_sodium = ?, value_carbohydrate = ?, components = ? 
+                    WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("sdiidiiiiiibs", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $id);
+        }
+    
+        return $stmt->execute();
     }
-
-    return $stmt->execute();
-}
 public function deleteProduct($id) {
     $sql = "DELETE FROM products WHERE id = ?";
     $stmt = $this->conn->prepare($sql);

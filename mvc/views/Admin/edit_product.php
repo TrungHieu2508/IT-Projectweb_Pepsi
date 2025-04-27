@@ -50,6 +50,17 @@
             <!-- Protein -->
             <label for="protein">Protein:</label>
             <input type="number" name="protein" id="protein" value="<?php echo htmlspecialchars($data['product']['protein']); ?>" required>
+             <!-- Value Fat -->
+             <label for="value_fat">Value Fat:</label>
+            <input type="number" name="value_fat" id="value_fat" value="<?php echo htmlspecialchars($data['product']['value_fat']); ?>" required>
+
+            <!-- Value Sodium -->
+            <label for="value_sodium">Value Sodium:</label>
+            <input type="number" name="value_sodium" id="value_sodium" value="<?php echo htmlspecialchars($data['product']['value_sodium']); ?>" required>
+
+            <!-- Value Carbohydrate -->
+            <label for="value_carbohydrate">Value Carbohydrate:</label>
+            <input type="number" name="value_carbohydrate" id="value_carbohydrate" value="<?php echo htmlspecialchars($data['product']['value_carbohydrate']); ?>" required>
 
             <!-- Components -->
             <label for="components">Components:</label>

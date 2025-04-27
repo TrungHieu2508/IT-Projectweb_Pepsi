@@ -41,9 +41,9 @@
                             <button type="submit" name="action" value="delete" class="delete__btn" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
                             </form>
                             </td>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <tr>
+                            <?php endforeach; ?>
+                             <?php else: ?>
+                                <tr>
                         <td colspan="3">No products found.</td>
                     </tr>
                 <?php endif; ?>

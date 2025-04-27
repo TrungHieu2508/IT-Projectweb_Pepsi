@@ -64,11 +64,14 @@ class Admin extends Controller {
             $total_carbohydrates = $_POST['total_carbohydrates'];
             $sugars = $_POST['sugars'];
             $protein = $_POST['protein'];
+            $value_fat = $_POST['value_fat'];
+            $value_sodium = $_POST['value_sodium'];
+            $value_carbohydrate = $_POST['value_carbohydrate'];
             $components = $_POST['components'];
             $img = isset($_FILES['img']['tmp_name']) && $_FILES['img']['tmp_name'] ? file_get_contents($_FILES['img']['tmp_name']) : null;
     
             // Gọi model để cập nhật sản phẩm
-            $result = $this->model("ProductModel")->updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img);
+            $result = $this->model("ProductModel")->updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img);
     
             if ($result) {
                 echo "<script>
