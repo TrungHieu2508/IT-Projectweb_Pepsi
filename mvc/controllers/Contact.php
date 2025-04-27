@@ -25,16 +25,15 @@ class Contact extends Controller {
             $result = $this->ContactModel->InsertContact($name, $phone, $email, $address, $reason, $message, $date);
 
             if ($result) {
-                $this->view("master3", [
-                    "page" => "contact",
-                    "result" => "Your message has been sent successfully!"
-                    
-                ]);
+                echo "<script>
+                    alert('Your message has been sent successfully!');
+                    window.location.href = '/Git/Contact'; // Chuyển hướng về trang liên hệ
+                </script>";
             } else {
-                $this->view("master3", [
-                    "page" => "contact",
-                    "result" => "Failed to send your message. Please try again."
-                ]);
+                echo "<script>
+                    alert('Failed to send your message. Please try again.');
+                    window.location.href = '/Git/Contact'; // Chuyển hướng về trang liên hệ
+                </script>";
             }
         }
     }

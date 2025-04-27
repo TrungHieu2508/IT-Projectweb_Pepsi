@@ -101,17 +101,9 @@
         <?php else: ?>
             <p>No products available.</p>
         <?php endif; ?>
-          
     </div>
 </div
-<div class="product__nextPage">
-        <div class="nextPage__text">
-            <!-- <p>Viewing Products 1 - 12 of 24</p> -->
-        </div>
-        <div class="nextPage__Btn">
-            <a href="/Git/Home"><button>home</button></a>
-        </div>
-    </div>
+<div class="product__end"></div>
 
     <script src="/Git/public/js/buy.js"></script>
 

@@ -31,7 +31,7 @@ html, body {
     
 }
 body{
-    background-color: var(--white-color); 
+    background-color: #F7F7F7; 
     color: var(--black-color);  
    
 }
@@ -128,7 +128,9 @@ ul{
     justify-content: center;
     height: 380px;
     width: 100%;
-    color:var(--white-color)
+    color:var(--white-color);
+    margin-top: 650px;
+    
 }
 
 .footer__content{
@@ -258,144 +260,3 @@ ul{
     object-fit:cover;
 }
 
-.container__pepsiText{
-    color:var(--black-color); 
-    font-size: 1.6rem;
-}
-
-.container__pepsiText{
-    font-size: 50px; 
-    font-weight: 800;
-    color:var(--white-color); 
-    position: relative; 
-    bottom: 260px;
-    left:151px; 
-}
-.container__pepsiBtn{
-    height: 60px;
-    width: 300px;
-    border-radius: 70px;
-    background-color: #d8d6d2;
-    border: 1px solid #d8d6d2;
-    color:var(--black-color);
-    font-size: 20px;
-    font-weight:700;
-    position: relative; 
-    bottom: 320px;
-    left: 1075px;     
-}
-
-.container__pepsiBtn:hover{
-    background-color: var(--white-color);
-}
-.container__textHeader{
-    color:var(--black-color); 
-    position: relative;
-    bottom:110px;
-    font-size:30px;
-    font-weight: 900;
-    text-align: center;
-}
-
-.container__form-product{
-    background-color:#f6f8f9;
-    color:var(--black-color); 
-    height: 600px; 
-    width: 1000px;
-    margin-top: 10px;
-    position: relative;
-    left:265px; 
-    bottom: 100px;
-    padding:20px;
-}
-
-.form__row{
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
-    position: relative;
-    top: 50px;
-}
-
-.form__group{
-    margin-top: 60px;
-    margin-bottom: 10px ;
-    width: 100%;
-    font-size: 18px;
-}
-
-input, select, textarea {
-    border:none; 
-    border-bottom: 1px solid var(--black-color);
-    background-color: #f6f8f9;
-    outline: none;
-    padding: 10px; 
-    width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    color:var(--black-color);
-    appearance: none;
-}
-input:focus, select:focus, textarea:focus{
-    border-bottom: 2px solid var(--black-color);
-
-}
-input[type="text"], select{
-    width: 440px;
-}
-select{
-    margin-top: 0.8px;
-    
-}
-textarea{
-    height: 245.5px;
-}
-.form__row--left{
-    margin-left: 50px;
-}
-.form__row--right{
-    margin-left: 40px;
-}
-.form__btn{
-    height: 35px;
-    width: 60px;
-    background-color: #0d6efd;
-    font-size: 16px;
-    color:#fff;
-    font-weight: 500;
-    border-radius: 10px;
-    border: 1px solid #0d6efd;
-    cursor: pointer;
-    
- }
- .form__btn:hover{
-    background-color: #fff;
-    color:#0d6efd;
- }
-.form__btn:active{
-    border: 3px solid #84aae5; 
-}
-
-
-table {
-    width: 100%; 
-    border-collapse: collapse;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-#table__user table th,
-#table__user table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-#table__user table th {
-    background-color: #3498db;
-    color: white;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}

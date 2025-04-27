@@ -1,7 +1,5 @@
 <?php
 class History extends Controller {
-    
-    
 
     public function Show() {
          // Kiểm tra session để lấy user_id
@@ -15,7 +13,7 @@ class History extends Controller {
         $orders = $this->model("OrderModel")->getOrdersByUserId($user_id);
 
         // Truyền dữ liệu đơn hàng đến view
-        $this->view("master3", [
+        $this->view("master4", [
             "page" => "history",
             "orders" => $orders
         ]);

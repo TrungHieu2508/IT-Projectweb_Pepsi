@@ -629,42 +629,19 @@ ul{
     display: contents; /* Sử dụng grid thay vì flex */
 }
 
-.product__nextPage {
+.product__end {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 50px; */ /* Remove fixed margin */
     width: 100%;
     margin-top: auto; /* Push to the bottom */
     padding-bottom: 20px; /* Add padding at the bottom */
 }
-.nextPage__text {
-    font-size: 17px;
-    margin-left: 0; /* Bỏ margin-left cũ */
-    text-align: center; /* Căn giữa text */
+/* Đảm bảo các sản phẩm bị ẩn không phá vỡ bố cục */
+.showProduct__item {
+    transition: visibility 0.2s, opacity 0.2s; /* Thêm hiệu ứng mượt mà */
 }
-.nextPage__Btn {
-    margin-left: 0; /* Bỏ margin-left cũ */
-    text-align: center; /* Căn giữa nút */
-    margin-top: 20px;
+
+.showProduct__item[style*="visibility: hidden"] {
+    opacity: 0; /* Làm mờ sản phẩm khi bị ẩn */
 }
-  .nextPage__Btn button{
-    height: 50px;
-    width: 150px;
-    background-color: #44B678;
-    border-radius: 100px;
-    border: 1px solid #44B678;
-    font-size: 16px;
-    cursor: pointer;
-    color:var(--white-color);
-    font-weight: bold;
-  }
-
-  .nextPage__Btn button:hover{
-    background-color: #25ae63;
-  }
-
-  .nextPage__Btn button:active{
-    background-color: var(--white-color);
-    color:#44B678;
-  }

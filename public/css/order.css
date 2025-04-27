@@ -28,8 +28,7 @@ html, body {
 .app__container {
     flex: 1; /* Nội dung sẽ mở rộng để đẩy footer xuống */
     margin-top: 80px;
-    
-    
+
 }
 body{
     background-color: var(--white-color); 
@@ -123,7 +122,6 @@ ul{
 
 .app__footer{
     background-color: #0025ff;
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,6 +296,7 @@ ul{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 100px;
     margin-top: -70px; 
+    
 }
 
 .form__title {

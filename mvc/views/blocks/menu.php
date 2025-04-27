@@ -79,7 +79,7 @@
 				<div><img src="/Git/public/img/notification.png" alt="notification" style="width: 20px;"></div>
 				<span class="num">8</span>
 			</a> -->
-			<a href="#" class="profile">
+			<a href="/Git/Admin" class="profile">
 				<img src="/Git/public/img/customer.png">
 				<span><?php echo isset($_SESSION['user']['name']) ? htmlspecialchars($_SESSION['user']['name']) : 'Admin'; ?></span>
 

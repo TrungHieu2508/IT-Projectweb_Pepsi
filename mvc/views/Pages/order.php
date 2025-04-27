@@ -9,8 +9,6 @@
 <body>
     <script src="/Git/public/js/order.js"></script>
     <div class="app">
-       
-
         <div class="app__container">
             <div class="container__logo--header">
                 <a href="/Git/Home"><img src="/Git/public/img/logoweb.png" alt="logo"></a>

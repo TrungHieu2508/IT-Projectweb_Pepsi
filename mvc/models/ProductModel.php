@@ -74,6 +74,7 @@ class ProductModel extends DB {
         return $row['total'];
     }
     
+    
   
     
 }
