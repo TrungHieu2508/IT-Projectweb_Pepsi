@@ -49,6 +49,48 @@ class Admin extends Controller {
             "products" => $products
         ]);
     }
+
+    public function EditProduct($id = null) {
+        $this->checkAdmin();
+    
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Lấy dữ liệu từ form
+            $id = $_POST['id']; // Lấy ID từ form
+            $name = $_POST['name'];
+            $size = $_POST['size'];
+            $calories = $_POST['calories'];
+            $total_fat = $_POST['total_fat'];
+            $sodium = $_POST['sodium'];
+            $total_carbohydrates = $_POST['total_carbohydrates'];
+            $sugars = $_POST['sugars'];
+            $protein = $_POST['protein'];
+            $components = $_POST['components'];
+            $img = isset($_FILES['img']['tmp_name']) && $_FILES['img']['tmp_name'] ? file_get_contents($_FILES['img']['tmp_name']) : null;
+    
+            // Gọi model để cập nhật sản phẩm
+            $result = $this->model("ProductModel")->updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img);
+    
+            if ($result) {
+                echo "<script>
+                    alert('Product updated successfully!');
+                    window.location.href = '/Git/Admin/ManageProducts';
+                </script>";
+            } else {
+                echo "<script>
+                    alert('Failed to update product.');
+                    window.location.href = '/Git/Admin/EditProduct/$id';
+                </script>";
+            }
+        } else {
+            // Hiển thị form chỉnh sửa
+            $product = $this->model("ProductModel")->getProductById($id);
+            $this->view("master2", [
+
+                "admin" => "edit_product",
+                "product" => $product
+            ]);
+        }
+    }
     
     
 

@@ -30,8 +30,11 @@ class ProductModel extends DB {
         return $products;
     }
     public function getProductById($id) {
-        $sql = "SELECT * FROM products WHERE id = $id";
-        $result = $this->execute($sql);
+        $sql = "SELECT * FROM products WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
         return $result->fetch_assoc();
     }
     public function getNextProductId($current_id) {
@@ -73,6 +76,25 @@ class ProductModel extends DB {
         $row = $result->fetch_assoc();
         return $row['total'];
     }
+public function updateProduct($id, $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img = null) {
+    if ($img) {
+        // Nếu có ảnh mới, cập nhật cả ảnh
+        $sql = "UPDATE products 
+                SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, components = ?, img = ? 
+                WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("sdiidiiibsi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $img, $id);
+    } else {
+        // Nếu không có ảnh mới, chỉ cập nhật các trường khác
+        $sql = "UPDATE products 
+                SET name = ?, size = ?, calories = ?, total_fat = ?, sodium = ?, total_carbohydrates = ?, sugars = ?, protein = ?, components = ? 
+                WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("sdiidiiisi", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $components, $id);
+    }
+
+    return $stmt->execute();
+}
     
     
   
