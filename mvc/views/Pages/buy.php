@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy</title>
     <link rel="stylesheet" href="/Git/public/css/block.css">
+    <script src="/Git/public/js/buy.js"></script>
+    <script src="/Git/public/js/searchbuy.js"></script>
+
 </head>
 <body>
 <div class="app__container">
@@ -40,7 +43,7 @@
                             <a href="/Git/History"><button>Order History</button></a>
                             <?php else: ?>
                             <!-- Nếu chưa đăng nhập -->
-                            <a href="/Git/Login"><button>Order</button></a>
+                            <a href="/Git/Login"><button>Order History</button></a>
                             <?php endif; ?>
                         </div>
                         <div class="product__header__shopping">
@@ -105,7 +108,7 @@
 </div
 <div class="product__end"></div>
 
-    <script src="/Git/public/js/buy.js"></script>
+    <
 
 </body>
 </html>

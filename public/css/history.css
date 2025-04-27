@@ -291,10 +291,10 @@ ul{
 .container__textHeader{
     color:var(--black-color); 
     position: relative;
-    bottom:110px;
     font-size:30px;
     font-weight: 900;
     text-align: center;
+    margin-right: 325px;
 }
 
 .container__form-product{
