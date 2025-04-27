@@ -8,7 +8,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="/Git/public/css/customer.css">
 
-	<title>AdminHub</title>
+	<title>Customer</title>
 </head>
 <body>
 <?php if (isset($_SESSION['message'])): ?>

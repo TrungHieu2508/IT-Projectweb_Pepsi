@@ -85,8 +85,8 @@
                  ($order['status'] === 'pending' ? 'pending' : 'processing'); 
         ?>">
         <?php 
-            echo $order['status'] === 'completed' ? 'Đã xử lý' : 
-                 ($order['status'] === 'pending' ? 'Chưa xử lý' : 'Đang xử lý'); 
+            echo $order['status'] === 'completed' ? 'Completed' : 
+                 ($order['status'] === 'pending' ? 'Pending' : 'Processing'); 
         ?>
     </span>
                 </td>

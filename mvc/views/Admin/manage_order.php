@@ -25,6 +25,7 @@
                         <th>Date Order</th>
                         <th>Status</th>
                         <th>Action</th>
+                        <th>Support</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,18 +45,20 @@
                 <form action="/Git/Admin/UpdateStatus" method="post">
                     <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
                     <select name="status" onchange="this.form.submit()">
-                        <option value="pending" <?php echo $order['status'] == 'pending' ? 'selected' : ''; ?>>Chưa xử lý</option>
-                        <option value="processing" <?php echo $order['status'] == 'processing' ? 'selected' : ''; ?>>Đang xử lý</option>
-                        <option value="completed" <?php echo $order['status'] == 'completed' ? 'selected' : ''; ?>>Đã xử lý</option>
+                        <option value="pending" <?php echo $order['status'] == 'pending' ? 'selected' : ''; ?>>Pending</option>
+                        <option value="processing" <?php echo $order['status'] == 'processing' ? 'selected' : ''; ?>>Processing</option>
+                        <option value="completed" <?php echo $order['status'] == 'completed' ? 'selected' : ''; ?>>Completed</option>
                     </select>
                 </form>
-                <form action="/Git/Admin/Delete/<?php echo $order['id']; ?>" method="get" style="display: inline;">
-                <button type="submit" onclick="return confirm('Are you sure you want to delete this order?');">Delete</button>
-                </form>
+                
             </td>
-                    
+                    <td class="support_btn">
+                        <form action="/Git/Admin/Delete/<?php echo $order['id']; ?>" method="get" style="display: inline;">
+                            <button type="submit" name="support" value="delete" class="delete__btn" onclick="return confirm('Are you sure you want to delete this order?');">Delete</button>
+                        </form>
+                    </td>
                 </tr>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
         <?php else: ?>
             <tr>
                 <td colspan="7">No orders found.</td>

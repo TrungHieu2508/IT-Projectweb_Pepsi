@@ -8,7 +8,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="/Git/public/css/customer.css">
 
-	<title>AdminHub</title>
+	<title>Contact</title>
 </head>
 <body>
 
