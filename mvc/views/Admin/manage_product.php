@@ -39,7 +39,9 @@
                              <a href="/Git/Admin/EditProduct/<?php echo $products['id']; ?>" class="edit__btn">Edit</a>
                             <form action="/Git/Admin/DeleteProduct/<?php echo $products['id']; ?>" method="POST" style="display:inline;">
                             <button type="submit" name="action" value="delete" class="delete__btn" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
-                            </form>
+                            <a href="/Git/Admin/AddProduct" class="insert__btn">add</a>
+
+                        </form>
                             </td>
                             <?php endforeach; ?>
                              <?php else: ?>

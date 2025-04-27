@@ -49,6 +49,46 @@ class Admin extends Controller {
             "products" => $products
         ]);
     }
+    public function AddProduct() {
+        $this->checkAdmin();
+    
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Lấy dữ liệu từ form
+            $name = $_POST['name'];
+            $size = $_POST['size'];
+            $calories = $_POST['calories'];
+            $total_fat = $_POST['total_fat'];
+            $sodium = $_POST['sodium'];
+            $total_carbohydrates = $_POST['total_carbohydrates'];
+            $sugars = $_POST['sugars'];
+            $protein = $_POST['protein'];
+            $value_fat = $_POST['value_fat'];
+            $value_sodium = $_POST['value_sodium'];
+            $value_carbohydrate = $_POST['value_carbohydrate'];
+            $components = $_POST['components'];
+            $img = isset($_FILES['img']['tmp_name']) && $_FILES['img']['tmp_name'] ? file_get_contents($_FILES['img']['tmp_name']) : null;
+    
+            // Gọi model để thêm sản phẩm
+            $result = $this->ProductModel->insertProduct($name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img);
+    
+            if ($result) {
+                echo "<script>
+                    alert('Product added successfully!');
+                    window.location.href = '/Git/Admin/ManageProducts';
+                </script>";
+            } else {
+                echo "<script>
+                    alert('Failed to add product.');
+                    window.location.href = '/Git/Admin/AddProduct';
+                </script>";
+            }
+        } else {
+            // Hiển thị form thêm sản phẩm
+            $this->view("master2", [
+                "admin" => "add_product"
+            ]);
+        }
+    }
 
     public function EditProduct($id = null) {
         $this->checkAdmin();
@@ -96,8 +136,6 @@ class Admin extends Controller {
     }
     public function DeleteProduct($id) {
         $this->checkAdmin();
-    
-        
     
         $result = $this->model("ProductModel")->deleteProduct($id);
     

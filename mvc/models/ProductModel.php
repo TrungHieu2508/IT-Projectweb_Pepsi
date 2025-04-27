@@ -106,6 +106,23 @@ public function deleteProduct($id) {
         return false; // Xóa thất bại
     }
 }
+public function insertProduct($name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img = null) {
+    if ($img) {
+        // Nếu có ảnh, thêm cả ảnh
+        $sql = "INSERT INTO products (name, size, calories, total_fat, sodium, total_carbohydrates, sugars, protein, value_fat, value_sodium, value_carbohydrate, components, img) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("sdiidiiiiiibs", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components, $img);
+    } else {
+        // Nếu không có ảnh, thêm các trường khác
+        $sql = "INSERT INTO products (name, size, calories, total_fat, sodium, total_carbohydrates, sugars, protein, value_fat, value_sodium, value_carbohydrate, components) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("sdiidiiiiiis", $name, $size, $calories, $total_fat, $sodium, $total_carbohydrates, $sugars, $protein, $value_fat, $value_sodium, $value_carbohydrate, $components);
+    }
+
+    return $stmt->execute();
+}
     
     
   
