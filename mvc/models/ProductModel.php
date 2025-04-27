@@ -95,6 +95,17 @@ public function updateProduct($id, $name, $size, $calories, $total_fat, $sodium,
 
     return $stmt->execute();
 }
+public function deleteProduct($id) {
+    $sql = "DELETE FROM products WHERE id = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        return true; // Xóa thành công
+    } else {
+        return false; // Xóa thất bại
+    }
+}
     
     
   

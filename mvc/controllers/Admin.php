@@ -91,6 +91,27 @@ class Admin extends Controller {
             ]);
         }
     }
+    public function DeleteProduct($id) {
+        $this->checkAdmin();
+    
+        
+    
+        $result = $this->model("ProductModel")->deleteProduct($id);
+    
+        if ($result) {
+            echo "<script>
+                alert('Product deleted successfully!');
+                window.location.href = '/Git/Admin/ManageProducts';
+            </script>";
+        } else {
+            echo "<script>
+                alert('Failed to delete product.');
+                window.location.href = '/Git/Admin/ManageProducts';
+            </script>";
+        }
+    }
+
+
     
     
 
