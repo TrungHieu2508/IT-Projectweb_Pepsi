@@ -1,0 +1,99 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: blue;
+    background-color: honeydew;
+}
+table, th, td {
+    border: 2px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}
+table img {
+    max-width: 100px;
+    height: 100px;
+}
+/* MAIN */
+#container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1430px; 
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.head p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+tr:hover {
+    background-color: white;
+}
+
+.action__btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    border-top: 0px solid #ccc;
+    border-left: 0px solid #ccc;
+    border-right: 0px solid #ccc;
+}
+
+.action__btn button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.insert__btn {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.edit__btn {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete__btn {
+    background-color: #3498db;
+    color: white;
+    margin-left: 5px;
+}
+
+/* MAIN */

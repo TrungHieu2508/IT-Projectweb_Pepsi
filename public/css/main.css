@@ -1,0 +1,318 @@
+.app__header{
+    background-color: var(--black-color);/* tam thoithoi*/
+    height: 70px;
+    position: fixed;
+    width: 100%; 
+    z-index: 2000;
+}
+.header__navbar{
+    display:flex; 
+    justify-content: space-between;
+}
+
+.header__navbar--menu{
+    font-size: 30px;
+    margin: 20px 25px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.header__navbar--menu:active{
+    opacity: 0.5;
+}
+.header__navbar--logo img{
+    height:50px; 
+    margin: 10px 10px;
+    cursor: pointer; 
+}
+.app__container{
+   padding-top: 70px; 
+}
+
+.app__footer{
+    display:flex;
+    width: 100%;
+    background-color: #0025ff;
+    color: white;
+    height: 300px; 
+    padding: 20px;
+}
+.app__footer__logo img{
+    height: 150px; 
+    margin-top: 60px; 
+    cursor: pointer;
+}
+.app__footer__content{
+    display: flex; 
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-size: 2rem;
+    /* margin-right: 280px; */
+    margin-left: 4rem;
+    line-height: 2.5rem;
+    font-weight:bolder;
+}
+.content__list{
+  margin: 0 20px;
+}
+.social__icon{
+    display: flex; 
+    justify-content: center;   
+    margin-right: 1rem; 
+    font-size: 4.3rem;
+    /* margin: 0 100px;  */
+}
+
+.app__menu--overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 46%;
+    height: 100%;
+    background-color: #0025ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    z-index: 1000;
+    border-top-left-radius: 30px;
+    text-align: center;
+}
+
+.app__menu--overlay.active{
+      transform: translateX(0);
+}
+.app__menu--logo{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.app__menu--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 85px;
+    text-align: center; /* Căn giữa text */
+}
+.app__menu--content a:hover{
+    color: rgb(230, 62, 62)
+}
+/* close menu */
+.app__menu__close--btn{
+    position: absolute; 
+    top: 2rem; 
+    right: 2rem; 
+    color:var(--white-color); 
+    cursor:pointer; 
+    font-size: 30px; 
+}
+.app__menu__close--btn:active{
+    opacity: .5;
+}
+.welcome__img img{
+    height: 650px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.app__container__welcome{
+    display: flex;
+    align-items: center;
+}
+
+.welcome__heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.welcome__heading__content{
+    margin-left: 100px;
+    margin-top: 40px;
+    line-height: 100px;
+}
+.welcome__heading__content h1{
+    font-size: 120px;
+    font-weight: 900;
+    color: rgb(0 37 255);
+}
+
+.welcome__heading__content h2{
+    font-size: 65px;
+    font-weight: 900;
+    margin-left: 10px;
+    color:var(--white-color);
+}
+
+.welcome__heading__content h3{
+    font-size: 25px;
+    font-weight: 900;
+    color:var(--white-color);
+    margin-left: 150px;
+    margin-bottom: -30px;
+}
+
+.welcome__heading--down{
+    margin-left: 100px;
+}
+
+.app__container__style{
+    display: flex;
+}
+
+.style__img__jacket img{
+    height:900px;
+    width: 800px;
+}
+
+.content__img img{
+    height: 500px;
+}
+.content__sign--button{
+    background-color: rgb(0 37 255);
+    height: 70px;
+    width: 300px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color:var(--white-color); 
+    border-radius: 80px;
+    border-color: rgb(0 37 255);
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.4s ease 0.2s;
+ 
+}
+.content__msg{
+    margin-left: 80px;
+    margin-top: 25px;
+    line-height: 8px;
+}
+.content__sign--button:hover{
+    color: rgba(3, 41, 255, 0.986);
+    background-color: var(--white-color);
+    cursor: pointer;
+    
+}
+.content__sign--button:active{
+    opacity: .5;
+}
+
+.viewProduct__video video{
+    width: 100vw
+}
+
+.viewProduct__button{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white-color);
+    background-color: #0025ff;
+    width:250px;
+    height: 60px;
+    border-radius: 80px;
+    text-align: center;
+    border-color: #0025ff;
+    transition: background-color .3s ease, color .4s ease .2s;
+   position: relative;
+   bottom: 120px;
+   left: 640px;
+}
+
+.viewProduct__button:hover{
+    background-color: var(--white-color);
+    color:#0025ff; 
+
+}
+
+.viewProduct__button:active{
+    opacity: .5;
+}
+
+.checkItOut__button{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white-color);
+    background-color: #0025ff;
+    width:220px;
+    height: 60px;
+    border-radius: 80px;
+    text-align: center;
+    border-color: #0025ff;
+    transition: background-color .3s ease, color .4s ease .2s;
+    position: relative;
+    bottom: 230px;
+    left: 640px;
+}
+.checkItOut__button:hover{
+    background-color: var(--white-color);
+    color:#0025ff; 
+}
+.checkItOut__button:active{
+    opacity: .5;
+}
+
+.viewRecipes__video video{
+    width: 100%;
+}
+.viewRecipes__button{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white-color);
+    background-color: #0025ff;
+    width:250px;
+    height: 60px;
+    border-radius: 80px;
+    text-align: center;
+    border-color: #0025ff;
+    transition: background-color .3s ease, color .4s ease .2s;
+   position: relative;
+   bottom: 350px;
+   left: 640px;
+}
+
+.viewRecipes__button:hover{
+    background-color: var(--white-color);
+    color:#0025ff; 
+}
+.viewRecipes__button:active{
+    opacity: .5;
+}
+
+.app__container__pulse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ .pulse__logo img{
+    height:180px;
+    padding: 0;
+   position: relative;bottom: 150px;
+    
+ }
+ .pulse__content{
+    line-height: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
+
+ .pulse__content h1{
+    font-size: 50px;
+    font-weight: 900;
+    position: relative;
+    bottom: 150px;
+ }

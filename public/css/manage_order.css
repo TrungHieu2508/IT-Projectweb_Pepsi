@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: blue;
+    background-color: honeydew;
+}
+table, th, td {
+    border: 2px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}
+#table__user table th {
+    background-color: #3498db;
+    color: white;
+}
+/* MAIN */
+#container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1430px; 
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.head h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.head p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+tr:hover {
+    background-color: white;
+}
+
+
+.delete__btn {
+    background-color: #3498db;
+    color: white;
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* MAIN */

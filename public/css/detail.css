@@ -1,0 +1,130 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center; 
+    width: 100%;
+    max-width: 2500px;
+    margin-top: 50px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    flex-direction: row-reverse; /* Đảo ngược thứ tự: hình ảnh sang phải, dữ liệu sang trái */
+    
+}
+.product-image {
+    align-self: center; /* Căn giữa ảnh theo chiều dọc */
+}
+
+.product-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    max-width: 350px;
+    text-align: left; /* Đảm bảo dữ liệu căn trái */
+}
+
+.product-details h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.product-details h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+.product-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-details table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.product-details table td {
+    padding: 8px 0;
+    font-size: 1.2rem;
+}
+
+.product-details table td:nth-child(2),
+.product-details table td:nth-child(3) {
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0025ff;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #0025ff;
+    
+}
+
+.btn:hover {
+    background-color: #0c22a1;
+}
+.navigation-arrows {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.left-arrow {
+    left: -50px; /* Đặt mũi tên trái bên ngoài ảnh */
+}
+
+.right-arrow {
+    right: -50px; /* Đặt mũi tên phải bên ngoài ảnh */
+}
